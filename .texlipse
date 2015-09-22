@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Tue Sep 22 16:19:04 BRT 2015
+markTmpDer=true
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=main.tex
+outputFile=SOTA.pdf
+langSpell=en
+markDer=true
+srcDir=

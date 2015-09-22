@@ -1,0 +1,53 @@
+EMMA SOTA: SOTA de aplicação HVOF
+
+.Processo atual de Hard coating
+.Processo de cavitação
+.Requisitos do ambiente
+
+Tarefas do Robô:
+1 - Robô deverá modelar perfil hidráulico da pá. Fernando Ribas (Tractbel), especialista em cavitação,  é uma boa referência para questões relacionadas à cavitação. Existe erosão e cavitação e esses fenômenos são influenciados pela variação de queda d'água. Estudos mostraram que com diferenças maiores de 12 metros, os problemas de cavitação são minimizados.  Há cavitação em ambos os lados da pá devido a presença de fenômenos de alta e baixa pressão.
+2 - Há necessidade de fazer remoção e jateamento para deixar a superfície rugosa e aumentar a aderência (óxido de alumínio). Esta tarefa não precisa ser realizada pelo robô. Existe a possibilidade de montar um andaime. 
+3 - Sim. Ambos os lados da pá são revestidos. O jateamento e preparação devem ser realizados em ambos os lados da pá.
+4 = 2.
+5 - Não. Apenas na superfície da pá.
+6 - A preparação não é automatizada. Mas é necessária a inspeção e análise de cavitação para realizar de forma automática o reparo. A aplicação de HVOF tem como premissa que os problemas relacionados à cavitação foram corrigidos e o peril hidráulico da pá está em conformidade com o gabarito. 
+7 - ?
+Extra:	- Medir hard coating é simples e rápido. Pontos são medidos. São 10 minutos por pá. Não será realizado pelo robô.
+	- Pode-se aplicar hard coating sem retirar o ultimo revestimento. Não é o melhor, mas possível. A TAP (aviação) retira tudo antes de aplicar. São diversas camadas finas.
+
+Ambiente:
+1 - CAD da turbina para ambiente de simulação. Breno deve conseguir. Provavelmente o perfil hidráulico da pá não será disponibilizado.
+2 - Sensores são necessários para isso. Rijeza possui esses sensores. Condições de temperatura e umidade do ambiente influenciam diretamente no processo de HVOF, porém a Rijeza afirmou que é possível realizar uma preparação prévia do ambiente.
+3 - Parte superior só pela escotilha. Mas, primeiramente, ela não será recuperada/revestida.
+4 - Não há sobreposição das pás.
+5 - Varia 29° total (14.5 para cada lado). Melhor estar totalmente aberta, por ser, possivelmente, a posição de melhor acesso. 
+6 - Pode ser girada, porém não é tão simples. Melhor realizar procedimento frente e verso para depois girar a turbina. Minimizar o número de rotações.
+7 - Sim = 5
+8 - É propriedade intelectual. Mas tem meios para conseguir.
+9 - Regras de segurança do trabalho. Posteriomente será discutido.
+Extra: Acesso à turbina somente pela escotilha.
+- Impacto de aplicação de HVOF na câmara: dilatação, pintura do cone, partículas desperdiçadas. Análise ambiental.
+
+HVOF:
+1 - 230 a 240 mm. Ângulo ótimo de HVOF é 90°, máximo 30°, em relação à superfície. 
+2 - Pistola 5 a 7 kg. Robô atualmente tem 150 kg de payload para controle das vibrações com boa margem de segurança. Mangueira de água, oxigênio, ar comprimido + pistola têm até 20 kg (estimativa).
+3 - Jateamento óxido de alumínio.
+4 - Último ponto a ser processado teve sua temperatura medida em 110 °C, podendo ser considerada a temperatura máxima da pá. O resfriamento da pá é lento. Chama de 3 mil graus.
+5 - Inox 420 não tem muito magnetismo. Alta temperatura gera perda de capacidade magnética. Ventosas podem ser soluções, mas material quente pode ocasionar em perda de sucção, principalmente com ventosas emborrachadas. Em relação ao coating, ventosas não são problemas.
+6 - Tempo de resfriamento ou cura são instantâneos. 
+7 - O desligamento é rápido por corte de gás. Atualmente, oscilação de energia é problema grave. O manipulador desliga, mas a chama continua acesa. Para solução deverá ser desenvolvido sistema de monitoramento e segurança. 
+8 - Espaço confinado, ruído absurdo, gases nocivos e risco de explosão. Não pode ter pessoas dentro. Há necessidade de medidor de gás remoto. A Operação deve ser remota, dificuldades em: UI, cabeamento e etc. 
+Condições de segurança do trabalho devem ser avaliadas pela ESBR (gases e etc). 
+Cabeamento dos gases pode ser realizado da superfície até a câmara (mais de 80 metros)
+9 - Velocidade mínima 40 m/min. Área útil da chama é de 3 mm. Jato com velocidade de 900 a 1000 m/s.
+
+Extras:
+- Não se sabe a força no eixo Z. Cálculo é necessário ou experimento em célula de carga.
+- Todo o material injetado tem perda de 40%. 
+- A pistola não pode permanecer na pá por muito tempo, pois acúmulo de material é criado. Troca de direção ou sentido na movimentação do manipulador é considerado como parada. As trocas deverão ser realizadas em áreas exteriores à superfície da pá. Entretanto, chapas de sacrifício podem ser colocadas para o processamento de pequenas áreas da pá. Fitas de sacrifício não são eficientes ainda.
+- Espessura de coating está relacionada à velocidade e quantidade de vezes que a pistola passa.
+- Tempo médio de processamento atual é de aprox 1 dia por superfície da pá. 6 horas um lado.
+- Menor escotilha de acesso da usina tem 80 cm.
+- Robô é selado devido ao pó.
+
+Solução: Robô com braço curto e divisão da pá em xadrez. Elevação do robô em relação à pá. Atuadores hidráulicos?

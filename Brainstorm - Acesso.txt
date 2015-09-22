@@ -1,0 +1,69 @@
+Opções de acesso:
+
+1 - Flutuando pela jusante
+	-> Evita-se o distribuidor
+
+Pros:
+	. Tamanho de acesso (7000 mm de diâmetro)
+	. Robô pode entrar montado
+	. Facilidade de utilização de robôs industriais
+	. Não é necessária a customização
+
+Contras:
+	. Correnteza
+	. Construção de ROV com flutuadores atuadores
+	. Necessita projeto de uma caixa vedada
+	. Logística para lançamento e recolhimento
+	. Infraestrutura
+	. Dificuldade para prototipagem
+	. Posicionamento de ROV preciso em lugares de pouca visibilidade
+
+
+2 - Escotilha inferior (800 mm)
+
+Pros:
+	. Escotilha maior
+	. Toda a operação é a seco (sem ROV)
+	. Acesso livre
+	. Já é usado para manutenção (*importante*)
+(verificar questão do tempo de montagem de andaimes)
+	. É possível passar um robô pequeno montado ou um robô grande desmontado 
+
+Contras:
+	. Não é suficientemente grande
+	. Logística do robô ao acesso: precisa de andaime + palha
+	. Movimentação e posicionamento do robô
+	. Precisa-se montar um plano horizontal para movimentação. Como prendê-lo?
+	. Precisa montar e desmontar robô grande
+	. Necessita infraestrutura para transporte, montagem e operação
+
+obs.: Colocar o robô entre as pás para aplicar revestimento de duas pás com uma instalação exige que o robô seja desmontado toda vez que a turbina for girada. Isso é ruim, pois após primeira aplicação a área fica de risco. Esta solução exige 5 movimentos no robô e 6 movimentos na turbina.
+
+A solução em que o robô fica atrás ou à frente exige que o robô seja movimentado apenas 2 vezes e a turbina fará 8 movimentos (duas voltas).
+
+3 - Escotilha superior (450 mm)
+
+Pros:
+	. Possível usar robô montado (4 movimentos)
+	. Não há necessidade de andaimes e planos horizontais para o robô
+	. Possibilidade de usar os furos da escotilha como fixação e referência
+	. Movimentação do robô com a ponte rolante
+	. Movimentação de um container com todo o sistema utilizando a ponte rolante
+	. Calibração simples
+	. Construção mecânica simples
+	. Sem limite de peso
+	. Possibilidade de todo o sistema ser industrial  
+
+Contras:
+	. Tamanho do buraco muito pequeno
+	. Mínimo de 4 movimentações da turbina
+	. Retirada do robô para movimentação da turbina
+	. Alcance do robô de 5 m
+	. Encontrar um robô que atenda os requisitos
+	. Pode haver necessidade de construir uma guia 
+	. Pode haver necessidade de manipulador customizado
+	. Serviço deve ser feito em uma etapa
+	. Robô não pode ser reposicionado
+Perguntas:
+1 - O calor gerado na pá montado pode causar danos à turbina ? O cone e etc? Checar o problema da temperatura.
+2 - Verificar distâncias exatas da escotilha superior às pás. 
