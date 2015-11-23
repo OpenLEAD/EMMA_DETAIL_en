@@ -1,15 +1,79 @@
-\subsubsection{Projetos com manipuladores industriais fixos}\label{proj_manip}
-Há diversos manipuladores robóticos industriais com as especificações
-necessárias para a realização da tarefa de metalização por HVOF. As empresas
-Fanuc, Motoman, ABB e KUKA fabricam manipuladores com dimensões compatíveis com o
-acesso pela escotilha inferior e velocidade, precisão, e espaço de trabalho que
-cumprem os requisitos para a execução do processo em todo um lado da pá, em uma
-base fixa. Porém, há incompatibilidade atrás da pá e a necessidade de escolher a
-posição correta do manipulador em relação à pá, a fim de maximizar a sua área de trabalho, no ambiente da
-turbina, o que pode restringir os seus movimentos.
-Como as pás podem ser giradas até um ângulo de $14.5^o$, são discutidas as ideias de posicionamento
-do manipulador entre as pás, a fim de executar a operação em ambos os lados da
-pá (um lado de cada pá), e o posicionamento fixo à frente e depois atrás à pá.
+\subsubsection{Design of industrial manipulator with rail on
+floor}\label{proj_manip}
+There are several industrial manipulators which fulfill the HVOF requirements.
+The companies Fanuc, Motoman, ABB and KUKA produce manipulators with compatible
+dimensions to the bottom hatch; speed, accuracy, and workspace that meet the
+requirements for HVOF process; and manipulators which can coat all over one side
+of the blade, in a fixed base position. However, manipulators are too big to
+operate behind the blade, on the distributor side, due to collision and joint
+constraints/robot manipulability. Besides, manipulators with such workspaces are
+heavyweight, thus the robot placement and locomotion inside the arc chamber
+would be complex.
+
+%Há diversos manipuladores robóticos industriais com as especificações
+%necessárias para a realização da tarefa de metalização por HVOF. As empresas
+%Fanuc, Motoman, ABB e KUKA fabricam manipuladores com dimensões compatíveis com
+% o acesso pela escotilha inferior e velocidade, precisão, e espaço de trabalho que
+%cumprem os requisitos para a execução do processo em todo um lado da pá, em uma
+%base fixa. Porém, há incompatibilidade atrás da pá e a necessidade de escolher
+% a posição correta do manipulador em relação à pá, a fim de maximizar a sua área de trabalho, no ambiente da
+%turbina, o que pode restringir os seus movimentos.
+%Como as pás podem ser giradas até um ângulo de $14.5^o$, são discutidas as
+% ideias de posicionamento do manipulador entre as pás, a fim de executar a operação em ambos os lados da
+%pá (um lado de cada pá), e o posicionamento fixo à frente e depois atrás à pá.
+
+The base consists of a transport rail and a positioning rail, both are fixed
+in the arc chamber by magnetic coupling and/or welding. The first rail starts at
+the bottom hatch entry and goes to the blade, allowing the locomotion of the
+robot in the arc chamber. The latter is coupled to the main track and positions
+the robot close to the blade, enabling displacement along it. Thus, the
+base may be summarized in three joints: prismatic, revolution and prismatic (PRP). As the robot
+can not not reach the entire blade, there is still the need of different
+vertical positions, which should be manually selected. The blade can coat in
+linear or circular motion, and, in both cases, the manipulator will be
+responsible for the speed, position and gun orientation. The gun direction
+exchange should occur outside the blade, or sacrifice plates should be used, or
+valves to redirect the coating particles should be used.
+
+%A base por um trilho de transporte e um de posicionamento. Ambos são fixados no
+%aro câmara por acoplamentos magnéticos e/ou solda. O primeiro começa na
+%entrada da pá e vai até a pá, permitindo o deslocamento do robô pelo aro
+% câmara.
+%O último é acoplado ao trilho principal e posiciona o robô próximo a pá, além
+% de possibilitar o deslocamento ao longo desta. Dessa forma, a base pode ser
+%resumida em três juntas: prismática, revolução e prismática (PRP). Como o robô
+%não possui alcance de toda a pá, há, ainda, a necessidade de posições verticais
+%diferentes escolhidas manualmente. A pá pode ser processada em movimentos
+%circulares ou lineares e, em ambos os casos, o manipulador ficará responsável
+% pela velocidade, posição e orientação do processo. A troca de sentido de movimento deverá ocorrer fora da
+%pá, ou devem ser utilizadas placas de sacrifício, ou válvulas para
+%redirecionamento das partículas de revestimento.
+
+%Esse tipo de abordagem simplifica a movimentação do robô no
+%trilho, uma vez que o trilho seria totalmente reto, e possibilitaria a
+%metalização de um dos lados das quatro pás com uma única instalação de base.
+%Porém, mesmo nesta solução, a altura do trilho deverá ser ajustada três vezes
+% para cada lado de pá.
+
+It is also required in this design the implementation of a
+localization/calibration system, as the robot should know its location in
+relation to the blade for autonomous operation. The localization requires
+external sensors, as cameras, or installed on manipulator tip, or base..
+
+%Em ambos os sistemas propostos, é necessária a implementação de um sistema de
+%localização do robô em relação à pá, tornando possível a geração de um
+%planejamento de trajetórias para o processo de metalização. O sistema de
+%localização pode ser concebido por sensores externos
+%ao robô (câmeras e outros), ou instalados no próprio manipulador/base.
+
+
+%The alternative to avoid contact with the blade consists of a single rail
+%rectilinear fixed by magnetic bases or welding of the rim in the soil chamber.
+% Like the robot has not reach all the shovel, there is still a need positions
+%different vertical. The blade can be processed in circular movements or
+%linear and, in both cases, the handler will be responsible for the speed,
+%position and orientation of the process. The exchange direction of movement
+% should occur outside the shovel or must sacrifice cards used.
 
 \textbf{Posicionamento entre pás}
 
