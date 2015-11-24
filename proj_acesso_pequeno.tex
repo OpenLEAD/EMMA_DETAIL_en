@@ -39,7 +39,7 @@ iiwa 14 R820), robot whose base diagonal is less than 35 cm.
 %35 cm da escotilha.
 
 
-The LBR R820 weighs 30 kg, has seven joints and has 14 kg payload, enough to
+The LBR R820 weights 30 kg, has seven joints and has 14 kg payload, enough to
 carry the coating equipment. However, further studies are needed to validate
 the robot, as the speed and precision requirements when coating.
 
@@ -50,12 +50,86 @@ the robot, as the speed and precision requirements when coating.
 %para a realização do revestimento.
 
 To place the LBR R820 in a position where it is able to process all the
-blade a hinged base model was proposed. The base consists of two links
-interconnected by a revolute joint and is attached to the top hatch itself. To
-cover the entire blade, the base must be able to assume different angles with
-respect to the insertion axis, and the joint that connects the two segments of
-the base and the tip of the base also need to move, which can be performed
-manually or with prismatic actuators.
+blade, a hinged base model was proposed. The base consists of two telescopic
+links interconnected by a revolute joint, and the first link is attached to the
+top hatch itself. To cover the entire blade, the base must be able to assume different angles with
+respect to the insertion axis, and the links must be telescopic type, with
+prismatic joints, positioning sensors, and recirculating ball actuators for low
+backlash and high precision. 
+
+The base's structure would consist of cylinders with maximized diameter and
+small thickness, which features a high polar moment of inertia and light weight,
+providing great bending stiffness and minimizing positioning errors and
+excessive vibration. Figure~\ref{fig::base_recolhida} and
+figure~\ref{fig::base_extendida} show the manipulator' base concept in two
+configurations: retracted and extended.
+
+%A base consiste em 3 braços
+%telescópicos que permitem a extensão do sistema para prover o alcance
+%necessário ao manipulador e o recolhimento para uma configuração incial que
+%permita a entrada do manipulador no aro câmara com segurança, sem o risco de
+%choques ou interferências indesejadas. Além disso, uma junta rotativa oferece
+% mais um grau de liberdade para o sistema, facilitando o acesso do manipulador à toda ar
+%superfície da pá. 
+
+%Os atuadores da base são acionados eletricamente e possuem sensores de
+%posicionamento. Atuadores de esferas recirculantes foram escolhidos devido à
+%baixa folga e precisão elevada. A estrutura da base é composta por cilindros de
+%diâmetro maximizado e pequena espessura, o que oferece um momento de inércia
+%polar elevado e baixo peso, fornecendo grande rigidez à flexão e minimizando
+%erros de posicionamento e vibração excessiva. A
+% figura~\ref{fig::base_recolhida} e a figura~\ref{fig::base_extendida} apresentam o conceito da base do manipulador em duas configurações: recolhida (configuração
+%de entrada) e estendida (configuração de operação).
+
+\begin{figure}[h!]
+\centering
+	\includegraphics[width=\columnwidth]{figs/estudo/solid/Base_Recolhida.PNG} 
+	\caption{Initial configuration of the base (retracted)}
+	\label{fig::base_recolhida}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+	\includegraphics[width=\columnwidth]{figs/estudo/solid/Base_Extendida.PNG} 
+	\caption{Base on extended configuration}
+	\label{fig::base_extendida}
+\end{figure}
+
+The main components of the base are shown in figures~\ref{fig::base_recolhida}
+and~\ref{fig::base_extendida}: 1) Linear actuator gear worm;
+2) fixed base; 3) prismatic arm \#1; 4) Arm Prismatic \#2; 5) linear actuators;
+6) revolute joint; 7) prismatic arm. Figure~\ref{fig::base_ambiente3d_recolhida} shows the base and KUKA LBR
+R820 manipulator.
+
+%Os componentes principais da base estão representados nas
+%figuras~\ref{fig::base_recolhida} e~\ref{fig::base_extendida}, são: 1) atuador
+%linear por sem-fim coroa; 2) base fixa; 3) braço prismático \#1; 4) braço
+%prismático \#2; 5) atuadores lineares; 6) junta rotativa; 7) braço prismático
+%\#3.
+
+%A figura~\ref{fig::base_ambiente3d_recolhida} demonstra a base com o
+%manipulador KUKA LBR 820 e as dimensões extremas, em milímetros, estimadas para
+%% o interior e para fora da turbina, na configuração inicial de entrada no aro
+%câmara pela escotilha superior.
+%A figura~\ref{fig::base_ambiente3d_extendida} apresenta a base com o
+% manipulador em uma configuração qualquer de operação, demonstrando o ganho de alcance e
+%generalidade de posicionamento fornecidos pela base.
+
+\begin{figure}[h!]
+\centering
+	\includegraphics[width=\columnwidth]{figs/estudo/solid/Base_Ambiente3d_Recolhida.png} 
+	\caption{Base and KUKA LBR R820 manipulator}
+	\label{fig::base_ambiente3d_recolhida}
+\end{figure}
+
+%\begin{figure}[h!]
+%\centering
+%
+	% \includegraphics[width=\columnwidth]{figs/estudo/solid/Base_Ambiente3d_Operacao.PNG}
+%	\caption{Base em uma geral configuração de operação}
+%	\label{fig::base_ambiente3d_extendida}
+%\end{figure}
+
 
 %Tendo como objetivo posicionar o LBR R820 em uma posição onde seja capaz de
 %trabalhar toda a pá, um modelo de base articulada foi proposto. A base

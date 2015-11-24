@@ -1,14 +1,16 @@
 \subsubsection{Design of industrial manipulator with rail on
 floor}\label{proj_manip}
+
 There are several industrial manipulators which fulfill the HVOF requirements.
 The companies Fanuc, Motoman, ABB and KUKA produce manipulators with compatible
 dimensions to the bottom hatch; speed, accuracy, and workspace that meet the
 requirements for HVOF process; and manipulators which can coat all over one side
-of the blade, in a fixed base position. However, manipulators are too big to
-operate behind the blade, on the distributor side, due to collision and joint
-constraints/robot manipulability. Besides, manipulators with such workspaces are
+of the blade, in a fixed base position. However, those manipulators are too big
+to operate behind the blade, on the distributor side, due to collision and
+joint constraints/robot manipulability. Besides, manipulators with such workspaces are
 heavyweight, thus the robot placement and locomotion inside the arc chamber
-would be complex.
+would be complex. Therefore, the logic solution would be to select a mid-sized
+manipulator and made a rail type base to place and move the robot. 
 
 %Há diversos manipuladores robóticos industriais com as especificações
 %necessárias para a realização da tarefa de metalização por HVOF. As empresas
@@ -56,9 +58,9 @@ valves to redirect the coating particles should be used.
 % para cada lado de pá.
 
 It is also required in this design the implementation of a
-localization/calibration system, as the robot should know its location in
+localization/calibration system, as the robot must know its location in
 relation to the blade for autonomous operation. The localization requires
-external sensors, as cameras, or installed on manipulator tip, or base..
+external sensors, as cameras, or installed on manipulator tip, or base.
 
 %Em ambos os sistemas propostos, é necessária a implementação de um sistema de
 %localização do robô em relação à pá, tornando possível a geração de um
@@ -75,58 +77,111 @@ external sensors, as cameras, or installed on manipulator tip, or base..
 %position and orientation of the process. The exchange direction of movement
 % should occur outside the shovel or must sacrifice cards used.
 
-\textbf{Posicionamento entre pás}
+\textbf{Transport rail}
 
-A figura~\ref{fig::andaime} mostra o espaço entre as pás da turbina, dentro do
-aro câmara. Um robô manipulador de médio porte pode ser fixado em uma base
-magnética, na posição que se encontra a escada da figura~\ref{fig::andaime}.
-Essa posição é vantajosa por possibilitar a execução da tarefa em duas pás
-(frente de uma e verso da outra), sem desmontar ou fazer grandes alterações no
-posicionamento da base do robô, diminuindo as intervenções e tempo de tarefa.
+The figure~\ref{fig::andaime} shows the space between the blades inside the
+arc chamber. A mid-sized robot manipulator should be hoisted through the bottom
+hatch, placed on a rail type base with magnetic holders and then should be moved
+to that space, as in figura~\ref{fig::rail1}. At that position, the robot should
+switch to the other rail. This position (robot between blades) is advantageous because it
+allows the manipulator to operate two blades (front and back of one of the
+other) without rail disassembling or major positioning changes.
 
-O estudo puramente geométrico demonstra que o alcance do manipulador robótico
-para o processamento de ambos os lados das pás, considerando uma base fixa entre
-as pás, deverá ser em torno de 5 metros. O manipulador industrial IRB5500,
-desenvolvido pela ABB para pintura, possui 3 metros de alcance, porém 180 kg, o que já dificulta ou até impossibilita a
-logística de movimentação e posicionamento in-situ. Não foi encontrado um robô
-industrial com o alcance necessário e que tivesse as dimensões máximas da
-escotilha inferior. 
+\begin{figure}[h!]	
+	\includegraphics[width=\columnwidth]{figs/manipuladores/rail1.PNG}
+	\caption{Transport rail}
+	\label{fig::rail1}
+\end{figure}
 
-A solução conceitual de posicionar um manipulador industrial entre as pás deve
-avaliar, portanto, todas as configurações necessárias da base (orientações e
-posições) para garantir que todo o espaço de trabalho do manipulador mais base
-cubra os lados de ambas as pás. O número de configurações e o projeto
-mecânico da base são necessários para a viabilização da solução,
-uma vez que será possível avaliar as intervenções e complexidades. Bases
-autônomas diminuem o número de intervenções e aumentam a precisção do sistema,
-porém aumentam a complexidade, o custo devido ao número de sensores e atuadores,
-e o peso do sistema, prejudicando a logística.
+%A figura~\ref{fig::andaime} mostra o espaço entre as pás da turbina, dentro do
+%aro câmara. Um robô manipulador de médio porte pode ser fixado em uma base
+%magnética, na posição que se encontra a escada da figura~\ref{fig::andaime}.
+%Essa posição é vantajosa por possibilitar a execução da tarefa em duas pás
+%(frente de uma e verso da outra), sem desmontar ou fazer grandes alterações no
+%posicionamento da base do robô, diminuindo as intervenções e tempo de tarefa.
 
-\textbf{Posicionamento à frente e atrás da pá}
-Posicionar de maneira fixa um manipulador com base magnética à frente e atrás da
-pá para a metalização é uma solução natural, já que é semelhante à utilizada pela
-empresa Rijeza atualmente. Um estudo puramente geométrico, utilizando as
-dimensões da pá, mostra que o manipulador deve possuir alcance de 1.7 m e ser
-posicionado a uma altura de 1.1 m em relação ao solo. Estudos de espaço de
-trabalho, manipulabilidade e colisões devem ser realizados para confirmar o
-estudo geométrico.
+A purely geometric study shows that the workspace of a robotic manipulator
+for processing both blades, assuming a fixed base between the blades, should be
+around 5 m. The industrial manipulator IRB5500, for example, developed by ABB
+for painting, is a large sized manipulator and has 3 meters range, 600 kg,
+which makes it very difficult or even impossible to \textit{in situ} logistics.
+As no industrial robot was found in requirements, a positioning rail should be
+made.
 
-O posicionamento do sistema à frente ou atrás da pá exige intervenções para
-rotação da turbina e para o deslocamento do sistema. Em relação a um
-sistema com base autônoma entre as pás, o processo parece mais custoso em
-intervenções manuais e mais demorado, porém bem mais simples em termos de
-robótica.
+%O estudo puramente geométrico demonstra que o alcance do manipulador robótico
+%para o processamento de ambos os lados das pás, considerando uma base fixa
+% entre as pás, deverá ser em torno de 5 metros. O manipulador industrial IRB5500,
+%desenvolvido pela ABB para pintura, possui 3 metros de alcance, porém 180 kg, o
+% que já dificulta ou até impossibilita a logística de movimentação e posicionamento in-situ. Não foi encontrado um robô
+%industrial com o alcance necessário e que tivesse as dimensões máximas da
+%escotilha inferior. 
 
-\textbf{Conclusão da solução com manipuladores industriais}
-A utilização de manipuladores industriais é a mais simples, em termos de
-sistemas robóticos, dentre todas as soluções para o acesso pela escotilha
-inferior.
-Não há projeto mecânico do manipulador, já que este será adquirido em um dos fabricantes citados. As dificuldades mecânicas do projeto serão em relação à logística de posicionamento
-e movimentação do robô dentro do aro câmara, e no desenvolvimento de uma base,
-que pode ser autônoma. Além disso, o projeto fica responsável pelo controle do
-manipulador, processamento de dados que envolvem o HVOF, planejamento de
-trajetórias e UI.
+%A solução conceitual de posicionar um manipulador industrial entre as pás deve
+%avaliar, portanto, todas as configurações necessárias da base (orientações e
+%posições) para garantir que todo o espaço de trabalho do manipulador mais base
+%cubra os lados de ambas as pás. O número de configurações e o projeto
+%mecânico da base são necessários para a viabilização da solução,
+%uma vez que será possível avaliar as intervenções e complexidades. Bases
+%autônomas diminuem o número de intervenções e aumentam a precisção do sistema,
+%porém aumentam a complexidade, o custo devido ao número de sensores e
+% atuadores, e o peso do sistema, prejudicando a logística.
 
-Os desafios consistem na construção de uma base rígida e a locomoção dos
-equipamentos pelo aro câmara. Este projeto conceitual será uma das frentes para
-o estudo de viabilidade.
+\textbf{Positioning rail}
+Fixedly positioning a robotic manipulator with magnetic holders at the front or
+at the back of the blade for HVOF process is a natural solution, since it is
+similar to the Rijeza and other companies procedure. However, a purely geometric
+study, using the real dimensions of the blade, shows that the manipulator must
+have more than 2.0 m range and 1.0 m height. Workspace analysis, kinematics and
+dynamics studies, and collision detection should be conducted to confirm the
+geometric study. A mid-sized robot can not reach the entire blade, thus
+its base should be able to move horizontally and vertically
+(figura~\ref{fig::rail2}).
+
+\begin{figure}[h!]	
+	\includegraphics[width=\columnwidth]{figs/manipuladores/rail2.PNG}
+	\caption{Positioning rail}
+	\label{fig::rail2}
+\end{figure}
+%Posicionar de maneira fixa um manipulador com base magnética à frente e atrás
+% da pá para a metalização é uma solução natural, já que é semelhante à utilizada pela
+%empresa Rijeza atualmente. Um estudo puramente geométrico, utilizando as
+%dimensões da pá, mostra que o manipulador deve possuir alcance de 1.7 m e ser
+%posicionado a uma altura de 1.1 m em relação ao solo. Estudos de espaço de
+%trabalho, manipulabilidade e colisões devem ser realizados para confirmar o
+%estudo geométrico.
+
+In this solution, a robot placed on a rail base on the floor can not coat
+blades on top, thus the turbine must be manually rotated and a new calibration process should be done
+for each step.
+
+%O posicionamento do sistema à frente ou atrás da pá exige
+%intervenções para rotação da turbina e para o deslocamento do sistema. Em
+% relação a um sistema com base autônoma entre as pás, o processo parece mais custoso em
+%intervenções manuais e mais demorado, porém bem mais simples em termos de
+%robótica.
+
+\textbf{Solution conclusion}
+In terms of robotics, industrial manipulators on a rail base is the simplest
+solution among all solutions to access through the bottom hatch. There is no
+mechanical design for the manipulator, since it will be acquired in one of the
+aforementioned manufacturers, but the mechanics will be responsible for the base
+design and logistics. In addition, the following steps should be done:
+manipulator control, data processing, calibration, path planning and UI.
+
+%A utilização de manipuladores industriais é a mais simples, em termos de
+%sistemas robóticos, dentre todas as soluções para o acesso pela escotilha
+%inferior.
+
+%Não há projeto mecânico do manipulador, já que este será adquirido em um dos
+% fabricantes citados. As dificuldades mecânicas do projeto serão em relação à logística de posicionamento e movimentação do robô dentro do aro câmara, e no desenvolvimento de uma base,
+%que pode ser autônoma. Além disso, o projeto fica responsável pelo controle do
+%manipulador, processamento de dados que envolvem o HVOF, planejamento de
+%trajetórias e UI.
+
+%The main challenge is to build a rigid base and the locomotion of
+%Equipment for the ring chamber. This conceptual design will be one of fronts to
+%the feasibility study.
+
+%Os desafios consistem na construção de uma base rígida e a locomoção dos
+%equipamentos pelo aro câmara. Este projeto conceitual será uma das frentes para
+%o estudo de viabilidade.
