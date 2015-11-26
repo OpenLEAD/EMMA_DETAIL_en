@@ -1,10 +1,11 @@
 \subsection{Robot tasks}\label{desc_taref}
 This subsection describes the basic tasks of the robot for \textit{in situ}
-turbine coating. Generally, the robot should be able to perform the coating task
-as if the blade were not installed in the tubina, as it is done by Rijeza
-company, in an autonomous way. As mentioned, the turbine blade should conform
+turbine coating. %Generally, the robot should be able to perform the coating
+% task as if the blade were not installed in the tubina, as it is done by Rijeza
+%company, in an autonomous way. 
+As mentioned, the turbine blade should conform
 to the template, hydraulic profile, before the coating process. Therefore,
-another task is to perform the hydraulic profile mapping, build a 3D model and
+another task is to perform the hydraulic profile mapping, build a 3D model, and
 analyze flaws.
 %Esta subseção descreve as tarefas básicas do robô para o revestimento de
 %turbinas \textit{in situ}. Em linhas gerais, o robô a ser desenvolvido deve ser
@@ -14,10 +15,9 @@ analyze flaws.
 % hidráulico de uma pá intacta. Portanto, uma tarefa do robô é realizar o mapeamento do perfil
 %hidráulico, construir um modelo 3D e analisar imperfeições.
 
-
-In case of deep blade deformations caused by cavitation and abrasion, the
-repair by welding should be done manually or automatically. An operator can
-manually perform the welding as there is no hard restrictions as the coating
+In case of deep blade deformations,% caused by cavitation and abrasion, 
+the repair by welding should be done.% manually or automatically. 
+An operator can manually perform the welding as there is no hard restrictions as the coating
 process (accuracy, speed, load). However, the hostile and confined environment
 can hinder the manual execution, thus welding can be also a robot task.
 %Em caso de deformações, causados por cavitação e abrasão, estas precisam
@@ -40,9 +40,9 @@ robot task.
 % de esta ser uma tarefa do robô. 
 
 The sandblasting process is normally required before the coating
-operation, subsection~\ref{sandblasting}.Rijeza company performs the sandblasting manually, but there are studies and
-companies performing sandblasting with robots. Thus sandblasting could be a
-robot task.
+operation.%, subsection~\ref{sandblasting}.
+Rijeza company performs the sandblasting manually, but there are studies and
+companies performing sandblasting with robots. Thus sandblasting could be a robot task.
 %Em caso de necessidade de aplicação
 %de novo revestimento, é necessária a remoção do revestimento antigo por
 %jateamento, a fim de deixar a superfície rugosa e aumentar sua aderência. A
@@ -60,23 +60,26 @@ robot task.
 %são discutidos na subseção~\ref{sec::desc_contex}. 
 
 Below, a summary of the task to be performed:
-Tasks that can be performed manually:
+Tasks that can be performed manually: 1) Blade damage inspection, for repair and
+for coating; 2) Repair; 3) System mounting ; 4) Surface sandblasting.
 %Das tarefas a serem relizadas, são destacadas as seguintes:
 %Tarefas que podem ser executadas manualmente:
-\begin{itemize}
-  \item Blade damage inspection, for repair and for coating.%Inspeção e
+%\begin{itemize}
+ % \item Blade damage inspection, for repair and for coating.%Inspeção e
   % análise de danos na pá, tanto para reparo quanto para revestimento.
-  \item Repair.
-  \item System mounting.%Montagem do sistema.
-  \item Surface sandblasting.%Jateamento da superfície.
-\end{itemize}
+ % \item Repair.
+ % \item System mounting.%Montagem do sistema.
+ % \item Surface sandblasting.%Jateamento da superfície.
+%\end{itemize}
 
-Tasks that can be performed by robot:%Tarefas que poderão ser executadas
+Tasks that can be performed by robot: 1) Hydraulic profile modeling; 2)
+Calibration; 3) Sandblasting; 4) Repair; 5) HVOF coating.
+%Tarefas que poderão ser executadas
 % pelo robô:
-\begin{itemize}
-  \item Hydraulic profile modeling.%Modelar o perfil hidráulico.
-  \item Calibration.
-  \item Sandblasting.
-  \item Repair.
-  \item HVOF coating.
-\end{itemize}
+%\begin{itemize}
+%  \item Hydraulic profile modeling.%Modelar o perfil hidráulico.
+%  \item Calibration.
+%  \item Sandblasting.
+%  \item Repair.
+%  \item HVOF coating.
+%\end{itemize}
