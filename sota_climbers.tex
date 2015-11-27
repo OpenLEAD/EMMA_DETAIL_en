@@ -4,8 +4,8 @@ gravity, moving in simple or complex geometric structures, such as
 walls, ceilings and roofs, turbine blades and nuclear plants.
 Climbers provide operational efficiency in hazardous environments, and increase
 operators health and safety. Some applications for climbing robots are:
-skyscrapers inspection and cleaning, nuclear power
-plants storage tanks diagnosis, shell ships and turbines welding and
+skyscrapers inspection and cleaning, storage tanks diagnosis in nuclear
+power plants, shell ships and turbines welding and
 maintenance\citep{armada2003application}.
 %Robôs escaladores são sistemas capazes de sustentar seu próprio peso contra a
 %gravidade, movendo-se em simples ou complexas estruturas geométricas, como
@@ -16,10 +16,9 @@ maintenance\citep{armada2003application}.
 %tanques de armazenamento em plantas nucleares, solda e manutenção de cascos de
 %navios e palhetas de turbinas \citep{armada2003application}. 
 
-The major challenges in climbers system designs are mobility and
-adhesion, power consumption, load capacity and weight. In
-\cite{modular} and \cite{climbsurv}, climbers are divided into types of
-locomotive mechanisms: legs; walker; translation; wheels; tracks;
+The development major challenges for climbers are mobility, adhesion, power
+consumption, load capacity, and weight. In \cite{modular} and \cite{climbsurv},
+climbers are divided into types of locomotive mechanisms: legs; walker; translation; wheels; tracks;
 advance by arms; cable-driven; and biomimetics. And adhesion types:
 suction or pneumatic; magnetic; electrostatic; chemistry; gripping; and hybrid.
 %Os grandes desafios nos projetos de sistemas escaladores são mobilidade e
@@ -31,7 +30,8 @@ suction or pneumatic; magnetic; electrostatic; chemistry; gripping; and hybrid.
 %ou pneumática; magnética; eletrostática; química; preensão; e híbrida.
 
 In the specific case of the HVOF coating problem in hydropower turbines, the
-following climber robots should be investigated:
+following climber robots should be investigated, as all of them have millimetric
+accuracy, and robustness:
 %No caso específico deste estudo da arte, destacam-se os robôs escaladores com
 % as seguintes aplicações:
 
@@ -39,67 +39,70 @@ following climber robots should be investigated:
   \item \emph {ships and turbines}: RRX3 for welding
    \citep{rrx3}, \emph{Climbing Robot for Grit Blasting for cleaning}
    \citep{crgb} and ICM Robot for inspection \citep{icm};
-  \item \emph{Industrial}: ROME II \citep{roma} and roma
-   CROMSCI \citep{CROMSCI}, both for inspection;
+  \item \emph{Industrial}: ROME II \citep{roma} and CROMSCI \citep{CROMSCI}, both for inspection;
   \item \emph{petrochemical plant}: TRIPILLAR \citep{tripillar} for inspection.
 \end{itemize}
 
-The RRX3 (figure~\ref{rrx3}), Daewoo Shipbuilding \& Marine Engineering, is a
-robot for hull ship welding. Its adhesion is gripping type, and translation
-locomotion type  (sliding segments) and longitudinal locomotion by wheels.
+The RRX3, Daewoo Shipbuilding \& Marine Engineering, is a
+robot with for hull ship welding with manipulator. Its adhesion is gripping
+type, locomotion is translation type (sliding segments), and longitudinal locomotion by wheels.
 The RRX3 robot has a 1.5 m manipulator with three prismatic joints and three
-revolution joints  (3P3R) for welding operation.
+revolution joints  (3P3R) for welding operation. The system weighs 120 kg with 5
+kg payload, it has a manipulator with welding tool, but low speed end effector.
+Regarding the HVOF application, the locomotion type is not efficient.
 %O RRX3 (figura~\ref{rrx3}), Daewoo Shipbuilding and Marine Engineering, é um
 %robô para a soldagem de casco de navios. Possui adesão por preensão, locomoção
 % transversal utilizando segmentos deslizantes e locomoção longitudinal por rodas. Possui um manipulador de 1.5 m com três juntas
 %prismáticas e três juntas de revolução (3P3R) para a operação de soldagem. 
 
-RRX 3 main characteristics are: base and manipulator with
-120 kg and 5 kg of payload, respectively; accurately
-millimeter manipulator and low speed end effector; robustness; welding tool
-operation; limited translation type locomotion.
+%RRX 3 main characteristics are: base and manipulator with
+%120 kg and 5 kg of payload, respectively; accurately
+%millimeter manipulator and low speed end effector; robustness; welding tool
+%operation; limited translation type locomotion.
 %As características principais do robô são: base e manipulador com
 %capacidades de carga de 120 kg e 5 kg, respectivamente; manipulador com
 % precisão milimétrica e efetuador de baixa velocidade; robustez para operar em ambiente de
 %alta periculosidade; opera instrumento de solda; e locomoção transversal é
 %restrita à aplicação.
 
-\begin{figure}[ht]
-\centering
-\includegraphics[width=8.4cm]{figs/climbers/RRX3_moving.jpg}
-\caption{RRX3 translation locomotion.}
-\label{rrx3}
-\end{figure}
+%\begin{figure}[ht]
+%\centering
+%\includegraphics[width=8.4cm]{figs/climbers/RRX3_moving.jpg}
+%\caption{RRX3 translation locomotion.}
+%\label{rrx3}
+%\end{figure}
 
-The \emph{Climbing robot for Grit Blasting} (figura~\ref{grit}), University of
-Coruna, is a robot for ship abrasive blasting. The robot moves by two
-sliding platforms with magnetic adhesion. The platforms have relative motion
+The \emph{Climbing robot for Grit Blasting}, %(figura~\ref{grit}), 
+University of Coruna, is a robot for ship abrasive blasting. The robot moves by
+two sliding platforms with magnetic adhesion. The platforms have relative motion
 between them and can rotate to compensate ship's hull curvatures or
-deflecting of objects.
+deflecting of objects. The abrasive system is similar to HVOF, but the robot
+locomotion not applicable to complex structures.
 %O \emph{Climbing robot for Grit Blasting} (figura~\ref{grit}), University of
 %Coruna, é um robô para jateamento abrasivo em navios. O robô utiliza duas
 % plataformas deslizantes com sistema de adesão por ímã magnético. Os módulos apresentam movimentação relativa entre si e pode rotar
 %para compensar as curvaturas do casco do navio ou desviar de objetos. 
 
-The \emph{Climbing robot for Grit Blasting} main characteristics are:
-abrasive system similar with HVOF; accurately
-millimeter movement; locomotion not applicable to complex structures; no
-manipulator.
+%The \emph{Climbing robot for Grit Blasting} main characteristics are:
+%abrasive system similar with HVOF; accurately
+%millimeter movement; locomotion not applicable to complex structures; no
+%manipulator.
 %As características principais do robô são: base com
 %capacidade de carga de sistema abrasivo semelhante a HVOF; base com
 %locomoção de precisão milimétrica; locomoção ampla, mas não aplicável a
 %estruturas complexas; e não possui manipulador, sendo necessário percorrer todo
 %o casco.
 
-\begin{figure}[ht]
-\centering
-\includegraphics[width=8.4cm]{figs/climbers/grit.png}
-\caption{Climbing robot for Grit Blasting}
-\label{grit}
-\end{figure}
+%\begin{figure}[ht]
+%\centering
+%\includegraphics[width=8.4cm]{figs/climbers/grit.png}
+%\caption{Climbing robot for Grit Blasting}
+%\label{grit}
+%\end{figure}
 
 
-\emph{The Climber} (figure~\ref{icm}), ICM Robotics, is an inspection robot for
+\emph{The Climber}%(figure~\ref{icm})
+, ICM Robotics, is an inspection robot for
 wind turbines, coating removal, surface cleaning and coating application.
 It has pneumatic adhesion and locomotion by tracks.
 %\emph{The Climber} (figura~\ref{icm}), ICM Robotics, é um robô para inspeção de
