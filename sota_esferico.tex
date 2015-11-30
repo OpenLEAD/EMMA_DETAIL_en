@@ -1,11 +1,10 @@
-\subsection{Manipulador com base esférica}
-A research and development project was presented in
-\cite{motta2010prototype} to propose methodology, simulation and
-the steps for constructing a robotic system to recover damage
-in hydraulic turbines blades. The robotic system does
-repair using the arc welding technology before held
-manually in highly dangerous environments with temperatures ranging
-between $ 40^o C$ and $ 99^o C$, in a 10 hours operation.
+\subsection{Manipulator on a fixed spherical base}
+An R\&D project was presented in \cite{motta2010prototype} to propose
+methodology, simulation and the steps for building a robotic system to repair
+hydraulic turbine blades,% The robotic system does repair using the arc welding
+%technology before held manually 
+ in highly dangerous environments with $ 40^o C$ to $ 99^o C$, and 10 operation
+ hours.
 %Um projeto de pesquisa e desenvolvimento foi apresentado em
 %\cite{motta2010prototype} com o objetivo de propor metodologia, simulação e
 %os passos para construção de um sistema robótico para recuperar danos materiais
@@ -14,19 +13,11 @@ between $ 40^o C$ and $ 99^o C$, in a 10 hours operation.
 %manualmente em ambientes de alta periculosidade com temperaturas que variam
 %entre $40^o C$ e $99^o C$, e operações que duram em torno de 10 horas. 
 
-The robot must meet the following requirements:
-\begin{itemize}
-   \item ability to operate in any position: horizontal, vertical,
-   reversed;
-   \item light weight for portability and blade fixation;
-   \item stiffness to deflection: payload on the wrist occurs in any
-   direction and extension;
-   \item high precision;
-   \item parts availability on the market;
-   \item user interface;
-   \item large workspace;
-   \item adhseion to the hydraulic turbine blades.
-\end{itemize}
+The robot meets the following requirements: ability to operate in any position:
+horizontal, vertical, reversed; lightweight for portability and blade fixation;
+stiffness to deflection: payload on the wrist occurs in any direction and
+extension; high precision; parts availability on the market; user interface;
+large workspace; adhesion to the hydraulic turbine blades.
 
 %O robô deve atender aos seguintes requisitos:
 %\begin{itemize}
@@ -42,29 +33,32 @@ The robot must meet the following requirements:
 %  \item Facilidade de adesão às pás de turbinas hidráulicas.
 %\end{itemize}
 
-The solution to the robotic system has spherical topology as can be
-shown in figure~\ref{fig: spherical} and the following characteristics:
+The system has spherical topology and the following characteristics: manipulator
+with three DOF (2R1P) and wrist with two DOF (2R); 3D surface mapping with laser
+scanner; embedded electronics; arc welding; blade adhesion by magnetic or
+suction devices; low cost; ring-shaped workspace with 2.5 m, and 60 cm height;
+30 kg weight and dimensions 30 x 25 x 100 cm; and autonomy.
 %A solução para o sistema robótico apresenta topologia esférica, como pode ser
 %visto na figura~\ref{fig:esferico} e características:
 
-\begin{figure}[ht]
-\centering
-\includegraphics[width=8.4cm]{figs/esferico/esferico.jpg}
-\caption{Illustration of the robotic system with spherical base}
-\label{fig:esferico}
-\end{figure}
+%\begin{figure}[ht]
+%\centering
+%\includegraphics[width=8.4cm]{figs/esferico/esferico.jpg}
+%\caption{Illustration of the robotic system with spherical base}
+%\label{fig:esferico}
+%\end{figure}
 
-\begin{itemize}
-   \item manipulator with three DOF (2R1P) and wrist with two DOF (2R);
-   \item 3D surface mapping with laser scanner;
-   \item embedded electronics;
-   \item arc welding;
-   \item blade adhesion by magnetic or suction devices;
-   \item low cost;
-   \item ring-shaped workspace with 2.5 m, and 60 cm height;
-   \item 30 kg weight and dimensions 30 x 25 x 100 cm;
-   \item autonomous manipulator;
-\end{itemize}
+%\begin{itemize}
+%   \item manipulator with three DOF (2R1P) and wrist with two DOF (2R);
+%   \item 3D surface mapping with laser scanner;
+%   \item embedded electronics;
+%   \item arc welding;
+%   \item blade adhesion by magnetic or suction devices;
+%   \item low cost;
+%   \item ring-shaped workspace with 2.5 m, and 60 cm height;
+%   \item 30 kg weight and dimensions 30 x 25 x 100 cm;
+%   \item autonomous manipulator;
+%\end{itemize}
 
 %\begin{itemize}
 %  \item Três (3) graus de liberdade no manipulador (2R1P) e dois graus de
@@ -84,7 +78,11 @@ for the HVOF application in hydraulic turbine blades, since its
 original application is blade repair by arc welding, same environment and
 similar challenge. All the system advantages and features are applicable to
 the solution of a HVOF system. However, there are particular challenges in the
-HVOF process, which are disadvantages of the solution:
+HVOF process, which are disadvantages of the solution: the HVOF must be
+performed in the entire blade, thus the positions of the system must be
+manually changed at least 2 times per blade side, and must be moved blade to
+blade; the end effector must process the blade with great speed, as required
+by the HVOF;complex adhesion system for blade temperature range.
 
 %O sistema robótico de manipulador com base esférica apresenta solução
 % compatível para a aplicação de HVOF em pás de turbinas hidráulicas, já que sua aplicação
@@ -94,14 +92,14 @@ HVOF process, which are disadvantages of the solution:
 %da solução:
 
 
-\textbf{Disadvantages:}
-\begin{itemize}
-   \item The HVOF must be performed in the entire blade. Therefore, the
-   positions of the system must be manually changed at least 2 times per blade
-   side, and must be moved blade to blade;
-   \item The end effector must process the blade with great speed, as
-   required by the HVOF.
-\end{itemize}
+%\textbf{Disadvantages:}
+%\begin{itemize}
+%   \item The HVOF must be performed in the entire blade. Therefore, the
+%   positions of the system must be manually changed at least 2 times per blade
+%   side, and must be moved blade to blade;
+%   \item The end effector must process the blade with great speed, as
+%   required by the HVOF.
+%\end{itemize}
 
 %\textbf{Desvantagens:}
 %\begin{itemize}

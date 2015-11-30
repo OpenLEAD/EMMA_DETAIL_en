@@ -1,35 +1,41 @@
 \subsection{Top hatch}
-The top hatch is at the top of the arc chamber, it has only 35 cm diameter,
+The top hatch, localized at the top of the arc chamber, has only 35 cm diameter,
 which is a challenge when thinking about using it as a robotic system access
 point. Furthermore its proximity to the blades and the free space outside the
-arc chamber create interesting possibilities for its use.
+arc chamber create interesting possibilities for its use. Using the top hatch as
+the access for robot has the follwing advantages: robot fixation stability,
+reference point (facilitating localization system, mapping, control and
+calibration), built logistics (conveyor gantry to position the robot and the
+HVOF system); and the following disadvantages: difficulty in finding robots of
+such size (35 cm diameter), the robot must be removed to rotate the blades, it
+is not a general solution (specific to Jirau installations).
 %Essa escotilha localizada no topo do aro câmara possui uma abertura de apenas
 %35 cm de diâmetro, o que cria um desafio quando se pensa em utiliza-la como
 %ponto de acesso para um robô. Por outro lado sua proximidade às pás e a área
 % livre fora do aro câmara criam possibilidades interessantes para seu uso.
 
-\textbf{Advantages}
-\begin{itemize}
-  \item robot fixation stability
-  \item reference point, facilitating localization system, mapping, control and
-  calibration
-  \item built logistics: conveyor gantry to position the robot and the
-  HVOF system
-\end{itemize}
+%\textbf{Advantages}
+%\begin{itemize}
+%  \item robot fixation stability
+%  \item reference point, facilitating localization system, mapping, control and
+%  calibration
+%  \item built logistics: conveyor gantry to position the robot and the
+%  HVOF system
+%\end{itemize}
 
-\textbf{Disadvantages}
-\begin{itemize}
-  \item difficulty in finding robots of such size (35 cm diameter)
-  \item during the operation, the robot must be
-  removed to rotate the blades
-  \item not a general solution, specific to Jirau
-\end{itemize}
+%\textbf{Disadvantages}
+%\begin{itemize}
+%  \item difficulty in finding robots of such size (35 cm diameter)
+%  \item during the operation, the robot must be
+%  removed to rotate the blades
+%  \item not a general solution, specific to Jirau
+%\end{itemize}
 
-The simplest solution to this access is to use an industrial robotic manipulator.
-The choice of the commercial robot is primarily associated within reach. On the
-other hand, only a small share of commercial robots have the dimension to fit
-the top hatch. Thus, the study was focused on the KUKA Light Weight (LBR
-iiwa 14 R820), robot whose base diagonal is less than 35 cm.
+The simplest solution to this access is to use an industrial manipulator.
+The choice of the robot is primarily associated with reach, but only a small
+share of commercial robots has the dimension to fit the top hatch. Thus, the
+study was focused on the KUKA Light Weight (LBR iiwa 14 R820), robot whose base
+diagonal is less than 35 cm.
 
 %A solução mais simples para este acessso é a utilização de um robô industrial
 %comercial. A escolha do robô está primariamente associada ao seu alcance. Por
@@ -39,7 +45,7 @@ iiwa 14 R820), robot whose base diagonal is less than 35 cm.
 %35 cm da escotilha.
 
 
-The LBR R820 weights 30 kg, has seven joints and has 14 kg payload, enough to
+The LBR R820 weighs 30 kg, has seven joints and has 14 kg payload, enough to
 carry the coating equipment. However, further studies are needed to validate
 the robot, as the speed and precision requirements when coating.
 
@@ -53,16 +59,15 @@ To place the LBR R820 in a position where it is able to process all the
 blade, a hinged base model was proposed. The base consists of two telescopic
 links interconnected by a revolute joint, and the first link is attached to the
 top hatch itself. To cover the entire blade, the base must be able to assume different angles with
-respect to the insertion axis, and the links must be telescopic type, with
-prismatic joints, positioning sensors, and recirculating ball actuators for low
-backlash and high precision. 
+respect to the insertion axis, the links must be telescopic type with
+prismatic joints.  
 
 The base's structure would consist of cylinders with maximized diameter and
 small thickness, which features a high polar moment of inertia and light weight,
-providing great bending stiffness and minimizing positioning errors and
-excessive vibration. Figure~\ref{fig::base_recolhida} and
-figure~\ref{fig::base_extendida} show the manipulator' base concept in two
-configurations: retracted and extended.
+providing great bending stiffness, and minimizing positioning errors and
+excessive vibration. A recirculating ball actuators were chosen for low
+backlash and high precision. Figure~\ref{fig::baselbr} shows the manipulator'
+base concept in two configurations: retracted and extended.
 
 %A base consiste em 3 braços
 %telescópicos que permitem a extensão do sistema para prover o alcance
@@ -83,20 +88,26 @@ configurations: retracted and extended.
 
 \begin{figure}[h!]
 \centering
-	\includegraphics[width=\columnwidth]{figs/estudo/solid/Base_Recolhida.PNG} 
-	\caption{Initial configuration of the base (retracted)}
-	\label{fig::base_recolhida}
+	\includegraphics[width=\columnwidth]{figs/estudo/solid/baselbr.jpg} 
+	\caption{Initial and extended configuration of the base.}
+	\label{fig::baselbr}
 \end{figure}
 
-\begin{figure}[h!]
-\centering
-	\includegraphics[width=\columnwidth]{figs/estudo/solid/Base_Extendida.PNG} 
-	\caption{Base on extended configuration}
-	\label{fig::base_extendida}
-\end{figure}
+%\begin{figure}[h!]
+%\centering
+%	\includegraphics[width=\columnwidth]{figs/estudo/solid/Base_Recolhida.PNG} 
+%	\caption{Initial configuration of the base (retracted)}
+%	\label{fig::base_recolhida}
+%\end{figure}
 
-The main components of the base are shown in figures~\ref{fig::base_recolhida}
-and~\ref{fig::base_extendida}: 1) Linear actuator gear worm;
+%\begin{figure}[h!]
+%\centering
+%	\includegraphics[width=\columnwidth]{figs/estudo/solid/Base_Extendida.PNG} 
+%	\caption{Base on extended configuration}
+%	\label{fig::base_extendida}
+%\end{figure}
+
+The main components of the base are shown in figure~\ref{fig::baselbr}: 1) Linear actuator gear worm;
 2) fixed base; 3) prismatic arm \#1; 4) Arm Prismatic \#2; 5) linear actuators;
 6) revolute joint; 7) prismatic arm. Figure~\ref{fig::base_ambiente3d_recolhida} shows the base and KUKA LBR
 R820 manipulator.
@@ -117,7 +128,7 @@ R820 manipulator.
 
 \begin{figure}[h!]
 \centering
-	\includegraphics[width=\columnwidth]{figs/estudo/solid/Base_Ambiente3d_Recolhida.png} 
+	\includegraphics[width=\columnwidth]{figs/estudo/solid/Base_Ambiente3d_Operacao.PNG} 
 	\caption{Base and KUKA LBR R820 manipulator}
 	\label{fig::base_ambiente3d_recolhida}
 \end{figure}
@@ -140,12 +151,12 @@ R820 manipulator.
 % precisa ter sua posição alterada, o que pode ser realizado manualmente ou com atuador.
 
 Inserting the system, composed of the base and manipulator, in the top
-hatch access requires special care, as the system total length is greater
-than the distance from the top of the arc chamber to the turbine nose. Thus,
-the arm and the base will need to be rotated during the insertion process,
-which will result in misalignment of the central mass (with respect to the axis
-perpendicular to the hatch) and will require a guide to compensate the torque
-generated by such misalignment.
+hatch, requires special care, as the system total length is greater
+than the distance from the top of the arc chamber to the turbine nose. The arm
+and the base will need to be rotated during the insertion process, which will
+result in system's central mass misalignment with respect to the
+perpendicular axis of the hatch, thus it will require a guide to compensate
+the generated torque.
 
 %Introduzir o robô, composto pelo conjunto base-LBR R820, é uma tarefa cuidadosa
 %pois a extensão total será maior que a distância do topo do aro câmara ao
@@ -156,7 +167,7 @@ generated by such misalignment.
 
 
 As the system is attached to the top hatch and the joint base is fixed,
-the torques are expected to be less than 3000 Nm on jointe base, and 4000 Nm on
+the torques are expected to be less than 3000 Nm on joint base, and 4000 Nm on
 the base during coating operation.
 
 %Com o robô fixado na escotilha e a junta da base travada, são esperados torques
