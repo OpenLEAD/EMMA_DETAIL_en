@@ -2,15 +2,15 @@
 floor}\label{proj_manip}
 
 There are several industrial manipulators which fulfill the HVOF requirements.
-The companies Fanuc, Motoman, ABB and KUKA produce manipulators with compatible
-dimensions to the bottom hatch; speed, accuracy, and workspace that meet the
-requirements for HVOF process; and manipulators which can coat all over one side
-of the blade, in a fixed base position. However, those manipulators are too big
-to operate behind the blade, on the distributor side, due to collision and
-joint constraints/robot manipulability. Besides, manipulators with such workspaces are
-heavyweight, thus the robot placement and locomotion inside the arc chamber
-would be complex. Therefore, the logic solution would be to select a mid-sized
-manipulator and made a rail type base to place and move the robot. 
+Companies as Fanuc, Motoman, ABB and KUKA, for example, manufacture manipulators
+compatible with the bottom hatch dimensions, with the HVOF speed and accuracy,
+with such workspace that the entire turbine blade could be coated at a fixed
+base position. However, those manipulators are too big to operate behind the
+blade, on the distributor side, due to environment collision, joint
+constraints, and robot manipulability. Besides, manipulators with such
+workspaces are heavyweight, thus the robot placement and motion would be complex
+inside the arc chamber. A feasible solution would be to select a
+mid-sized manipulator and made a rail type base to place and move the robot.
 
 %Há diversos manipuladores robóticos industriais com as especificações
 %necessárias para a realização da tarefa de metalização por HVOF. As empresas
@@ -24,18 +24,22 @@ manipulator and made a rail type base to place and move the robot.
 % ideias de posicionamento do manipulador entre as pás, a fim de executar a operação em ambos os lados da
 %pá (um lado de cada pá), e o posicionamento fixo à frente e depois atrás à pá.
 
-The base consists of a transport rail and a positioning rail, both are fixed
-in the arc chamber by magnetic coupling and/or welding. The first rail starts at
-the bottom hatch entry and goes to the blade, allowing the locomotion of the
-robot in the arc chamber. The latter is coupled to the main track and positions
-the robot close to the blade, enabling displacement along it. Thus, the
-base may be summarized in three joints: prismatic, revolution and prismatic (PRP). As the robot
-can not not reach the entire blade, there is still the need of different
-vertical positions, which should be manually selected. The blade can coat in
-linear or circular motion, and, in both cases, the manipulator will be
-responsible for the speed, position and gun orientation. The gun direction
-exchange should occur outside the blade, or sacrifice plates should be used, or
-valves to redirect the coating particles should be used.
+The base consists of a transport rail and a positioning rail, both fixed
+in the arc chamber by magnetic coupling and/or welding. The first rail
+(transport) solves a logistic problem, as it starts at the bottom hatch entry
+and goes to the blade, moving the robot in the arc chamber. The latter
+(positioning) is coupled to the main rail and positions the robot close to the
+blade, enabling displacement along it, solving the horizontal HVOF cover of the
+blade.
+
+The base may be summarized in three joints: prismatic (main rail), revolution
+(joint between main and second rail), and prismatic (second rail) (P-R-P). As
+the robot can not vertically cover the entire blade, there is still the need of
+different vertical positions, which should be manually selected. The blade can
+be coated on linear or circular motion, and, in both cases, the manipulator will
+be responsible for speed, position and gun orientation. The gun direction
+exchange should occur outside the blade, or sacrifice plates, or valves to
+redirect the coating particles should be used.
 
 %A base por um trilho de transporte e um de posicionamento. Ambos são fixados no
 %aro câmara por acoplamentos magnéticos e/ou solda. O primeiro começa na
@@ -57,10 +61,10 @@ valves to redirect the coating particles should be used.
 %Porém, mesmo nesta solução, a altura do trilho deverá ser ajustada três vezes
 % para cada lado de pá.
 
-It is also required in this design the implementation of a
-localization/calibration system, as the robot must know its location in
-relation to the blade for autonomous operation. The localization requires
-external sensors, as cameras, or installed on manipulator tip, or base.
+This design also requires the implementation of a localization/calibration
+system, as the robot must know its location in relation to the blade for
+autonomous operation. The localization requires external sensors, as cameras,
+and a laser sensor installed on manipulator tip, or base for feedback position.
 
 %Em ambos os sistemas propostos, é necessária a implementação de um sistema de
 %localização do robô em relação à pá, tornando possível a geração de um
@@ -83,9 +87,9 @@ The figure~\ref{fig::andaime} shows the space between the blades inside the
 arc chamber. A mid-sized robot manipulator should be hoisted through the bottom
 hatch, placed on a rail type base with magnetic holders and then should be moved
 to that space, as in figura~\ref{fig::rail1}. At that position, the robot should
-switch to the other rail. This position (robot between blades) is advantageous because it
-allows the manipulator to operate two blades (front and back of one of the
-other) without rail disassembling or major positioning changes.
+switch to the other rail. That strategic position (robot between blades) is
+advantageous as it allows the manipulator to operate adjacent blades without
+rail disassembling or major positioning changes.
 
 \begin{figure}[h!]	
 	\includegraphics[width=\columnwidth]{figs/manipuladores/rail1.PNG}
@@ -100,13 +104,12 @@ other) without rail disassembling or major positioning changes.
 %(frente de uma e verso da outra), sem desmontar ou fazer grandes alterações no
 %posicionamento da base do robô, diminuindo as intervenções e tempo de tarefa.
 
-A purely geometric study shows that the workspace of a robotic manipulator
-for processing both blades, assuming a fixed base between the blades, should be
-around 5 m. The industrial manipulator IRB5500, for example, developed by ABB
-for painting, is a large sized manipulator and has 3 meters range, 600 kg,
-which makes it very difficult or even impossible to \textit{in situ} logistics.
-As no industrial robot was found in requirements, a positioning rail should be
-made.
+However, a purely geometric study shows that the necessary workspace for
+adjacent blades coating, assuming a fixed base between the blades,
+is around 5 m reach. The industrial manipulator IRB5500, for example, developed
+by ABB for painting, is a large sized manipulator and has 3 meters range, 600 kg.
+As no mid-sized industrial robot was found for completely cover
+the blade on a fixed base position, a positioning rail should be made.
 
 %O estudo puramente geométrico demonstra que o alcance do manipulador robótico
 %para o processamento de ambos os lados das pás, considerando uma base fixa
@@ -131,11 +134,10 @@ Fixedly positioning a robotic manipulator with magnetic holders at the front or
 at the back of the blade for HVOF process is a natural solution, since it is
 similar to the Rijeza and other companies procedure. However, a purely geometric
 study, using the real dimensions of the blade, shows that the manipulator must
-have more than 2.0 m range and 1.0 m height. Workspace analysis, kinematics and
-dynamics studies, and collision detection should be conducted to confirm the
-geometric study. A mid-sized robot can not reach the entire blade, thus
-its base should be able to move horizontally and vertically
-(figura~\ref{fig::rail2}).
+have more than 2.5 m reach. Workspace analysis, kinematics studies, and
+collision detection was conducted to confirm the geometric study. A mid-sized
+robot can not reach the entire blade, thus its base should be able to move
+horizontally and vertically (figura~\ref{fig::rail2}).
 
 \begin{figure}[h!]	
 	\includegraphics[width=\columnwidth]{figs/manipuladores/rail2.PNG}
@@ -150,9 +152,9 @@ its base should be able to move horizontally and vertically
 %trabalho, manipulabilidade e colisões devem ser realizados para confirmar o
 %estudo geométrico.
 
-In this solution, a robot placed on a rail base on the floor can not coat
-blades on top, thus the turbine must be manually rotated and a new calibration process should be done
-for each step.
+In this solution, a robot placed on a rail type base, on the floor, can not coat
+the blades on top, thus the turbine must be manually rotated and a new
+calibration process should be done for each step.
 
 %O posicionamento do sistema à frente ou atrás da pá exige
 %intervenções para rotação da turbina e para o deslocamento do sistema. Em
@@ -162,7 +164,7 @@ for each step.
 
 \textbf{Solution conclusion}
 In terms of robotics, industrial manipulators on a rail base is the simplest
-solution among all solutions to access through the bottom hatch. There is no
+solution among all solutions for the bottom hatch. There is no
 mechanical design for the manipulator, since it will be acquired in one of the
 aforementioned manufacturers, but the mechanics will be responsible for the base
 design and logistics. In addition, the following steps should be done:
