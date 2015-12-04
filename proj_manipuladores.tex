@@ -27,7 +27,7 @@ mid-sized manipulator and made a rail type base to place and move the robot.
 The base consists of a transport rail and a positioning rail, both fixed
 in the arc chamber by magnetic coupling and/or welding. The first rail
 (transport) solves a logistic problem, as it starts at the bottom hatch entry
-and goes to the blade, moving the robot in the arc chamber. The latter
+and goes to the blade, moving the robot through the arc chamber. The latter
 (positioning) is coupled to the main rail and positions the robot close to the
 blade, enabling displacement along it, solving the horizontal HVOF cover of the
 blade.
@@ -64,7 +64,8 @@ redirect the coating particles should be used.
 This design also requires the implementation of a localization/calibration
 system, as the robot must know its location in relation to the blade for
 autonomous operation. The localization requires external sensors, as cameras,
-and a laser sensor installed on manipulator tip, or base for feedback position.
+and a laser sensor installed on the manipulator tip, or base for feedback
+position.
 
 %Em ambos os sistemas propostos, é necessária a implementação de um sistema de
 %localização do robô em relação à pá, tornando possível a geração de um
@@ -86,14 +87,14 @@ and a laser sensor installed on manipulator tip, or base for feedback position.
 The figure~\ref{fig::andaime} shows the space between the blades inside the
 arc chamber. A mid-sized robot manipulator should be hoisted through the bottom
 hatch, placed on a rail type base with magnetic holders and then should be moved
-to that space, as in figura~\ref{fig::rail1}. At that position, the robot should
+to that space, as in figure~\ref{fig::rail1}. At that position, the robot should
 switch to the other rail. That strategic position (robot between blades) is
 advantageous as it allows the manipulator to operate adjacent blades without
 rail disassembling or major positioning changes.
 
 \begin{figure}[h!]	
 	\includegraphics[width=\columnwidth]{figs/manipuladores/rail1.PNG}
-	\caption{Transport rail}
+	\caption{Transport rail mounted inside the turbine.}
 	\label{fig::rail1}
 \end{figure}
 
@@ -107,7 +108,8 @@ rail disassembling or major positioning changes.
 However, a purely geometric study shows that the necessary workspace for
 adjacent blades coating, assuming a fixed base between the blades,
 is around 5 m reach. The industrial manipulator IRB5500, for example, developed
-by ABB for painting, is a large sized manipulator and has 3 meters range, 600 kg.
+by ABB for painting, and is a large sized manipulator and has 3 meters range,
+600 kg.
 As no mid-sized industrial robot was found for completely cover
 the blade on a fixed base position, a positioning rail should be made.
 
@@ -134,14 +136,14 @@ Fixedly positioning a robotic manipulator with magnetic holders at the front or
 at the back of the blade for HVOF process is a natural solution, since it is
 similar to the Rijeza and other companies procedure. However, a purely geometric
 study, using the real dimensions of the blade, shows that the manipulator must
-have more than 2.5 m reach. Workspace analysis, kinematics studies, and
-collision detection was conducted to confirm the geometric study. A mid-sized
+have more than 2.5 m reach. To perform this task, workspace analysis, kinematics
+studies, and collision detection was conducted to confirm the geometric study. A mid-sized
 robot can not reach the entire blade, thus its base should be able to move
-horizontally and vertically (figura~\ref{fig::rail2}).
+horizontally and vertically (figure~\ref{fig::rail2}).
 
 \begin{figure}[h!]	
 	\includegraphics[width=\columnwidth]{figs/manipuladores/rail2.PNG}
-	\caption{Positioning rail}
+	\caption{Positioning rail behind the blade.}
 	\label{fig::rail2}
 \end{figure}
 %Posicionar de maneira fixa um manipulador com base magnética à frente e atrás
