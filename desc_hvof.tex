@@ -2,7 +2,7 @@
 The thermal spraying (or metallizing) is a process in which
 heated materials are sprayed onto a surface in order to improve or
 restore their properties and dimensions. The coating extends the material life
-cycle, significantly increasing its resistance to erosion and corrosion. 
+cycle, significantly increasing its resistance to erosion and/or corrosion. 
 %The different types of thermal spraying are: plasma spraying, detonation
 %spraying, wire arc spraying, flame spraying, High velocity oxy-fuel coating
 %spraying (HVOF), warm spraying and cold spraying.
@@ -42,7 +42,7 @@ takes 6 hours per side of the blade.
 The HVOF consists of feeding, in a combustion chamber, the coating material
 (tungsten carbide), a gaseous fuel mixture (propane), and oxygen. According to
 the data provided by the Rijeza company, the 8 kg spray gun projects a flame of
-$3000^oC$, spraying the particles with 700 to 1000 m/s speed, generating a
+$3000^oC$, spraying the particles with 700 to 1000 m/s speed, and generating a
 15 N recoil force.
 %O HVOF consiste em alimentar, numa câmara de combustão, o material de
 %revestimento (carboneto de tungstênio), uma mistura gasosa do combustível
@@ -53,8 +53,9 @@ $3000^oC$, spraying the particles with 700 to 1000 m/s speed, generating a
 The robotic manipulator must have 5 mm accuracy, and the spray gun should remain
 at a 230 to 240 mm distance with $90^o\pm 60^o$ angle in respect to the metallic
 surface plane. The end effector of the manipulator must control the spray
-gun at a constant 40 m/min speed and should not stop during the process in a blade range
-position (\textit{long stop}), otherwise coating material would accumulate.
+gun at a constant 40 m/min speed and not stop during the process with the blade
+in its range (\textit{long stop}), otherwise coating material would
+accumulate.
 The end effector direction changes are considered \textit{long stop} too, thus
 direction changes should be made out of the blade range, or sacrifice plates
 should be used. Sacrifice plates, or masking, are metal plates placed on blade
@@ -92,7 +93,7 @@ $110^oC$; the environment temperature and humidity should be monitored and
 ideally set for the coating process; and $40\%$ of the sprayed particles are
 lost during the process \citep{wu2006rebound}, which are spread throughout
 the environment. Therefore, some measures must be taken for the execution: the
-operation must be teleoperated; no human presence is required; environment
+operation must be teleoperated; no human presence can be required; environment
 gases, humidity and temperature must be constantly monitored and controlled; the
 robotic manipulator should be sealed; %the wasted particles should be removed afer process (cleaning); 
 and system electric/electronic shutdown must be accompanied by gas cutting.
