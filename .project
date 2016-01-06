@@ -14,11 +14,4 @@
 	<natures>
 		<nature>net.sourceforge.texlipse.builder.TexlipseNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>Arm.tex</name>
-			<type>1</type>
-			<location>C:/Program Files/MikTex 2.9/tex/plain/armenian/arm.tex</location>
-		</link>
-	</linkedResources>
 </projectDescription>
