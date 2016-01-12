@@ -1,235 +1,110 @@
-\subsection{Climbing robots}\label{sota_climbers}
-Climbing robots are systems capable of supporting its own weight against
-gravity, moving in simple or complex geometric structures, such as
-walls, ceilings and roofs, turbine blades and nuclear plants.
-Climbers provide operational efficiency in hazardous environments, and increase
-operators health and safety. Some applications for climbing robots are:
-skyscrapers inspection and cleaning, storage tanks diagnosis in nuclear
-power plants, shell ships and turbines welding and
-maintenance \citep{armada2003application}.
-%Robôs escaladores são sistemas capazes de sustentar seu próprio peso contra a
-%gravidade, movendo-se em simples ou complexas estruturas geométricas, como
-%paredes, tetos e telhados, palhetas de turbinas e plantas nucleares.
-%Essa classe de robôs oferece eficiência operacional em ambientes
-%de alta periculosidade, sendo utilizados visando saúde e segurança dos
-%trabalhadores, como em inspeção e limpeza de arranha-céus, diagnóstico de
-%tanques de armazenamento em plantas nucleares, solda e manutenção de cascos de
-%navios e palhetas de turbinas \citep{armada2003application}. 
+\subsection{Base Concepts}
 
-The development major challenges for climbers are mobility, adhesion, power
-consumption, load capacity, and weight. In \cite{modular} and \cite{climbsurv},
-climbers are divided into types of locomotive mechanisms: legs; walker; translation; wheels; tracks;
-advance by arms; cable-driven; and biomimetics. And adhesion types:
-suction or pneumatic; magnetic; electrostatic; chemical; gripping; and hybrid.
-%Os grandes desafios nos projetos de sistemas escaladores são mobilidade e
-%aderência, além de consumo de energia, capacidade de carga e peso. Em
-%\cite{modular} e \cite{climbsurv}, os robôs escaladores são divididos em tipos
-%de locomoção:
-%pernas; como andador; utilizando segmentos deslizantes; rodas; esteiras; avanço
-%pendurado por braços; por cabos; e biomimética. E categorias de adesão: sucção
-%ou pneumática; magnética; eletrostática; química; preensão; e híbrida.
-
-In the specific case of the HVOF coating problem in hydropower turbines, the
-following climber robots should be investigated, as all of them have millimetric
-accuracy, and robustness:
-%No caso específico deste estudo da arte, destacam-se os robôs escaladores com
-% as seguintes aplicações:
-
-\begin{itemize}
-  \item \emph {ships and turbines}: RRX3 for welding
-   \citep{rrx3}, \emph{Climbing Robot for Grit Blasting for cleaning}
-   \citep{crgb} and ICM Robot for inspection \citep{icm};
-  \item \emph{Industrial}: ROME II \citep{roma} and CROMSCI \citep{CROMSCI}, both for inspection;
-  \item \emph{petrochemical plant}: TRIPILLAR \citep{tripillar} for inspection.
-\end{itemize}
-
-The RRX3, Daewoo Shipbuilding \& Marine Engineering, is a
-robot for hull ship welding with manipulator. Its adhesion is gripping
-type, locomotion is translation type (sliding segments), and longitudinal locomotion by wheels.
-The RRX3 robot has a 1.5 m manipulator with three prismatic joints and three
-revolution joints  (3P3R) for welding operation. The system weighs 120 kg with 5
-kg payload, it has a manipulator with welding tool, but low speed end effector.
-Regarding the HVOF application, the locomotion type is not efficient.
-%O RRX3 (figura~\ref{rrx3}), Daewoo Shipbuilding and Marine Engineering, é um
-%robô para a soldagem de casco de navios. Possui adesão por preensão, locomoção
-% transversal utilizando segmentos deslizantes e locomoção longitudinal por rodas. Possui um manipulador de 1.5 m com três juntas
-%prismáticas e três juntas de revolução (3P3R) para a operação de soldagem. 
-
-%RRX 3 main characteristics are: base and manipulator with
-%120 kg and 5 kg of payload, respectively; accurately
-%millimeter manipulator and low speed end effector; robustness; welding tool
-%operation; limited translation type locomotion.
-%As características principais do robô são: base e manipulador com
-%capacidades de carga de 120 kg e 5 kg, respectivamente; manipulador com
-% precisão milimétrica e efetuador de baixa velocidade; robustez para operar em ambiente de
-%alta periculosidade; opera instrumento de solda; e locomoção transversal é
-%restrita à aplicação.
-
-%\begin{figure}[ht]
-%\centering
-%\includegraphics[width=8.4cm]{figs/climbers/RRX3_moving.jpg}
-%\caption{RRX3 translation locomotion.}
-%\label{rrx3}
-%\end{figure}
-
-The \emph{Climbing Robot for Grit Blasting}, %(figura~\ref{grit}), 
-University of Coruna, is a robot for ship abrasive blasting. The robot moves by
-two sliding platforms with magnetic adhesion. The platforms have relative motion
-between them and can rotate to compensate ship's hull curvatures or to
-deflect objects. The abrasive system is similar to HVOF, but the robot locomotion not applicable to complex structures.
-%O \emph{Climbing robot for Grit Blasting} (figura~\ref{grit}), University of
-%Coruna, é um robô para jateamento abrasivo em navios. O robô utiliza duas
-% plataformas deslizantes com sistema de adesão por ímã magnético. Os módulos apresentam movimentação relativa entre si e pode rotar
-%para compensar as curvaturas do casco do navio ou desviar de objetos. 
-
-%The \emph{Climbing robot for Grit Blasting} main characteristics are:
-%abrasive system similar with HVOF; accurately
-%millimeter movement; locomotion not applicable to complex structures; no
-%manipulator.
-%As características principais do robô são: base com
-%capacidade de carga de sistema abrasivo semelhante a HVOF; base com
-%locomoção de precisão milimétrica; locomoção ampla, mas não aplicável a
-%estruturas complexas; e não possui manipulador, sendo necessário percorrer todo
-%o casco.
-
-%\begin{figure}[ht]
-%\centering
-%\includegraphics[width=8.4cm]{figs/climbers/grit.png}
-%\caption{Climbing robot for Grit Blasting}
-%\label{grit}
-%\end{figure}
+From the conclusion about the base concepts on (EMMA-SOTA), it's clear that rail
+based ideas are the simplest solutions. So, focusing on rail concepts, here it's
+explored three different ones, differentiated by its degrees of freedom. They
+were all designed withstand the dynamic efforts that can cause vibration and
+elevated tensions.
 
 
-\emph{The Climber}%(figure~\ref{icm})
-, ICM Robotics, is an inspection robot for
-wind turbines, coating removal, surface cleaning and coating application.
-It has pneumatic adhesion and locomotion by tracks. It has 25 kg base payload,
-and a small sized low speed manipulator. The locomotion type presents
-restrictions to some curvatures.
-%\emph{The Climber} (figura~\ref{icm}), ICM Robotics, é um robô para inspeção de
-%turbinas eólicas, remoção de revestimento, limpeza de superfície, e aplicação
-% de revestimento.
-%Possui adesão pneumática (sucção) e locomoção por esteiras. 
+$\bullet$~\textbf{Prismatic-Rotacional-Rotacional Base (P-R-R):}
+  
+  This concept is composed of three degrees of freedom: one prismatic and two
+  rotational. The prismatic is simply the rail that shall be aligned with the
+  runners rotational axis, being responsible for bringing the arm closer to the
+  blade. 
+  
+  Neste conceito estudou-se a possibilidade de utilizar uma base com $3$ graus
+  de liberdade: um prismático e dois rotacionais. O prismático seria composto
+  por um trilho alinhado e paralelo ao eixo da turbina que transportaria o robô
+  até a região próxima a pá. Uma junta rotacional e com eixo vertical orientaria
+  a base nesta direção e uma junta perpedincular à primeira faria o
+  posicionamento da base do robô para então iniciar o processo de revestimento.
+  A figura~\ref{fig::base_prr} ilustra este conceito.
+    
+  \begin{figure}[h!]
+   \centering
+   \includegraphics[width=0.8\columnwidth]{figs/bases/base_prr}
+   \caption{Base Primático-Rotacional-Rotacional}
+   \label{fig::base_prr}
+\end{figure}
 
-%\emph{The Climber} main characteristics are: 25 kg base payload; accurately
-%millimeter movement; a modular manipulator can be attached to the base; small
-%size manipulator and low speed; locomotion type presents restriction to
-%some curvatures.
-%As características principais do robô são: base com capacidade de carga de 25
-%kg; base com locomoção de precisão milimétrica; manipulador modular pode ser
-%acoplado à base; manipulador de dimensão reduzida e baixa velocidade; e
-%locomoção apresenta restrição a algumas curvaturas acentuadas.
+  A vantagem deste conceito é conferir um alcance grande ao manipulador através
+  da base, permitindo que este possa ser de menor alcance próprio, mas ao mesmo
+  tempo mais leve.
+  Porém, devido à configuração de juntas e pelos resultados encontrados no
+  estudo cinemático, a manobrabilidade desta base seria reduzida naquele espaço,
+  havendo posicionamentos difíceis de serem alcançados, ou até impossíveis
+  dependendo do manipulador escolhido.
+  
+$\bullet$~\textbf{Base Prismática (P):}
 
-%\begin{figure}[ht]
-%\centering
-%\includegraphics[width=8.4cm]{figs/climbers/icm.png}
-%\caption{The Climber}
-%\label{icm}
-%\end{figure}
+  Este conceito consiste de um trilho (junta prismática) para o transporte do
+  manipulador desde a escotilha até o ponto de interesse para revestimento na
+  face anterior ou posterior da pá. Quando posicionado, remove-se a seção
+  do trilho na direção que obstrui a rotação do rotor. Neste conceito,
+  adiciona-se um grau de liberdade ao sistema utilizando a própria rotação do
+  rotor, posicionando a pá em relação ao robô. A base mecânica então forneceria
+  apenas movimento no trilho na direção do eixo da turbina, deixando fixas as
+  outras direções. O procedimento para o revestimento seria o posicionamento do
+  rotor, deixando a região a ser processada ao alcance do manipulador; o
+  posicionamento do robô no trilho, em relação a pá; a ancoragem do robô
+  no ambiente; e o revestimento da região possível para aquela posição.
+  Repete-se então este procedimento até ter toda a face processada e
+  posiciona-se a próxima pá para revestimento, sem necessidade de mover ou
+  desmontar a base do robô até todas as faces daquele lado estarem completas.  A
+  figura~\ref{fig::base_p} ilustra este conceito.
+  
+  \begin{figure}[h!]
+   \centering
+   \includegraphics[width=0.8\columnwidth]{figs/bases/base_p}
+   \caption{Base Prismática}
+   \label{fig::base_p}
+\end{figure}
+  
+  Este conceito foi estudado para o manipulador MH$12$, que de acordo com a
+  análise cinemática consegue processar toda a extensão vertical. Para outros
+  manipuladores, seria necessário incluir uma junta prismática, adicionando um
+  grau de liberdade, na direção vertical.
+  
+  A análise cinemática também demonstrou que seriam necessárias muitas posições
+  do rotor para completar uma face da pá. Há inclusive dificuldades operacionais e
+  de segurança no procedimento de rotação do rotor que devem ser considerados. O
+  rotor só pode ser girado manualmente, não fornecendo precisão no
+  posicionamento da pá em relação a base. Por ser uma tarefa manual, deve-se ter
+  procedimentos adequados de segurança para preservar tanto o operador quanto os
+  equipamentos próximos. Estas preocupações tornam a solução pouco prática sob o
+  ponto de vista operacional.
 
-The Rome II%(figura~\ref{roma2})
-, University Charles II of Madrid, is an inspection robot for complex
-environments. It has pneumatic adhesion and moves like a caterpillar
-(biomimicry). Rotation and planning trajectory are performed optimally to
-ensure stability and obstacle avoidance.
-%O ROMA II (figura~\ref{roma2}), Universidade Carlos II de Madrid, é um robô
-% para inspeção de ambientes complexos. A sua tecnologia de adesão é pneumática (sucção) e
-%locomove-se como uma lagarta (biomimética). Sua movimentação e planejamento de
-%trajetória são realizados de maneira ótima de forma a garantir estabilidade e
-%evitar obstáculos. 
+$\bullet$~\textbf{Base Prismática-Rotacional-Prismática (P-R-P):}
 
-%The Rome II main characteristics are: high payload capacity; accurately
-%millimeter movement; no manipulator; locomotion for complex environments.
-%As características principais do robô são: base com grande capacidade de carga;
-%base com locomoção de precisão milimétrica; não possui manipulador; locomoção
-% em ambientes de grande complexidade.
+  Este conceito consiste de uma base composta por um trilho primário (junta
+  prismática $1$), uma plataforma de base pivotada por mancal e rolamentos entre
+  o trilho primário e secundário (junta rotacional) e um trilho secundário
+  (junta prismática $2$). Montado o trilho primário alinhado ao eixo da turbina
+  a base rotacional sobre o trilho primário, fixa-se o robo sobre a base
+  rotacional. Esta base permitrá a montagem do trilho secundário apenas quando o
+  robô atingir a região de interesse para revestimento. Quando posicionado o
+  manipulador, monta-se então o trilho secundário alinhado ao plano paralelo a
+  face da pá e ancora-se a base no ambiente. Desta forma, o robô pode-se
+  movimentar ao longo de toda a extensão da pá por meio do trilho secundário e
+  também se aproximar e se afastar da superfície da pá, por meio do trilho
+  primário. A figura~\ref{fig::base_prp} ilustra este conceito.
 
-%\begin{figure}[ht]
-%\centering
-%\includegraphics[width=8.4cm]{figs/climbers/roma2.jpg}
-%\includegraphics[width=4.2cm,height=4.2cm]{figs/climbers/roma2.jpg}
-%\caption{ROMA II.}
-%\label{roma2}
-%\end{figure}
-CROMSCI% (figure~\ref{cromsci})
-, Kaiserslautern University of Technology, is an
-inspection and autonomous robot for large concrete walls, as
-pillars of bridges and dams. Its adhesion system is composed of seven vacuum
-chambers (suction), valves and pressure sensors for system control. The
-locomotion system has omnidirectional wheels.
-%CROMSCI (figura~\ref{cromsci}), Kaiserslautern University of Technology, é um
-%robô autônomo para inspeção de grandes paredes de concreto, como pilares de
-% pontes, barragens. Seu sistema de adesão é composto por sete câmaras de vácuo (sucção), com um sistema
-%de controle por válvulas e sensores de pressão para reagir rapidamaente a
-%condições adversas. Locomove-se com rodas omnidirecionais para locomoção.
+\begin{figure}[h!]
+   \centering
+   \includegraphics[width=0.9\columnwidth]{figs/bases/base_prp}
+   \caption{Base Primática-Rotacional-Prismática}
+   \label{fig::base_prp}
+\end{figure}
 
-%The CROMSCI main characteristics are: low payload capacity; accurately
-%millimeter movement; no manipulator; low speed.
-%As características principais do robô são:
-%base com pouca capacidade de carga; base com locomoção de precisão milimétrica;
-% não possui manipulador; e apresenta baixa velocidade.
-
-%\begin{figure}[ht]
-%\centering
-%\includegraphics[width=8.4cm]{figs/climbers/cromsci.jpg}
-%\caption{The CROMSCI robot.}
-%\label{cromsci}
-%\end{figure}
-
-TRIPILLAR, Ecole Polytechnique Federale de Lausanne, is a small inpection robot
-(96 x 46 x 64 mm) for petrochemical plants. Its adhesion is done by magnetic
-legs on a caterpillar triangular shape, and it moves by tracks.
-
-A specific case of climbers is the \textit{cabling robots}, which use a set
-of cables to ensure its proper positioning in its working area. The cables provide
-manipulator range improvement, decrease the adhesion complexity and reduce the
-weight carried by the robot. As an example, the \textit{torboMate} is a climber
-with magnetic adhesion, it can have two or more emitting jets with 4000 bar of
-supply capacity. It has 45 kg and reaches 20 m/min speed \citep{torbo}.
-
-RIWEA is a purely cabling robot, as it has no other type of position
-adjustment, for wind power turbines cleaning. It is an open frame concept robot
-which uses four ropes to move up and down. It has five main parts, which
-automatically adjust to the blade surface during its move
-\citep{jeon2012maintenance}. Its greatest strength lies the ability to adapt the
-curvature of the blade while maintaining a foothold on it, and it is also less
-susceptible to vibration \citep{riwea}.
-
-Climbing robots are widely applicable, have different adhesion solutions and
-mobility. There is not, so far, a climber that fulfills all the HVOF
-requirements for the turbine blade coating, but some of the systems, such as
-\emph{The Climber} (ICM Robotic), can generate complete solutions with
-adaptations.
-%Os robôs escaladores são utilizados em diversas aplicações e possuem diferentes
-%soluções de aderência e locomoção, como foi exposto nesta subseção. Não há,
-%até o momento, um robô escalador que possui todas as características
-%exigidas para a tarefa de HVOF em pás de turbinas, porém a adaptação de
-%alguns desses sistemas, como \emph{The Climber} da ICM Robotic, pode gerar
-%soluções completas.
-
-The advantages for climbing robot solution are: easily installation, small sized
-manipulator, small base, lightweight, autonomy; and the disadvantages are:
-complex locomotion system, complex mechanics, manual installation on blade,
-well-developed robot safety system, limited battery or umbilical management
-system. 
-%As vantagens e desvantagens para solução de robôs escaladores são:
-%\textbf{Advantages:}
-%\begin{itemize}
-%  \item Easily installation;
-%  \item Small size manipulator, since robot moves on blade;
-%  \item Small base;
-%  \item Small weight;
-%  \item Autonomy while operating; 
-%\end{itemize}
-%and disadvantages 
-%\textbf{Disadvantages:}
-%\begin{itemize}
-%  \item Complex locomotion system with obstacle avoidance and path
-%  planning;
-%  \item Complex mechanics, as robot should be able to support its weight plus
-%  the manipulator and the HVOF spary gun;
-%  \item Robot must be manually installed on each blade or a complex locomotion
-%  system by arms should be developed;;
-%  \item Robot safety system must be well developed;
-%  \item Limited battery or umbilical management system for mobile robots;
-%\end{itemize}
+  Desta forma, o rotor deve estar girado em, no mínimo $30^o$ para não haver
+  contato com o trilho primário. A análise cinemática será realizada para
+  encontrar a melhor configuração de juntas da base que permite ao robô se
+  movimentar nos graus de liberdade da base, sem alterar o posicionamento do
+  rotor e, assim, cobrir uma face inteira da pá. Para a repetição do processo
+  nas outras pás do lado da sucção da turbina, é necessária a desmontagem do
+  trilho secundário, o recuo do robô e desmontagem de parte do trilho primário,
+  permitindo o giro do rotor para a pá seguinte.
+  Para as faces do lado de adução, não é necessária a desmontagem parcial do
+  trilho primário. 
