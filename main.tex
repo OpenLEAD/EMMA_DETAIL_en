@@ -1,4 +1,6 @@
 \documentclass{main}
+
+\usepackage[table,xcdraw]{xcolor}
     
 
 \usepackage{graphicx}      % include this line if your document contains figures
@@ -13,6 +15,7 @@
 \usepackage{capt-of}
 \usepackage{kpfonts}
 \usepackage{calc}
+\usepackage{hyperref}
 \newlength\shlength
 \newcommand\xshlongvec[2][0]{\setlength\shlength{#1pt}%
   \stackengine{-5.6pt}{$#2$}{\smash{$\kern\shlength%
@@ -20,7 +23,9 @@
       {\rule{\widthof{$#2$}}{.57pt}\kern.4pt}{O}{r}{F}{F}{L}\kern-\shlength$}}%
       {O}{c}{F}{T}{S}}
 \sloppy  
-
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+  
 \begin{document}
 
 \begin{frontmatter}
