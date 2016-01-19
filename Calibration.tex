@@ -2,18 +2,22 @@
 %%%%%%%%%%%%%% INTRO %%%%%%%%%%%%%%%
 
 % TODO Elael reler
-The hardcoating process currently used considers that the position and
-the blade orientation is fixed in relation to the robot and , once correctly that
-positioned , the process runs in open loop . However, for any
-one of the solutions proposed by this document , you can not assume that neither
-position or the orientation of the handler , for the blade to be processed , if
-keep fixed.
+Once the robot is inside the draft tube, and positioned on the runner's area,
+the system needs to calibrate. In other words, it has to recognize the
+environment, the blade, the robot and the relative positions between all these
+elements.
 
-For a correct path planning the handler must follow during
-hardcoating task , it is important knowledge transform between
-coordinate system of the manipulator and of the blade being processed . Therefore, it is
-must use a system that allows the acquisition of information
-respect for the environment and the relative position between the handler and the blades .
+The hardcoating process currently considers that the robot's position and the
+blade orientation is fixed in relation to the robot and, once correctly positioned,
+the process runs in open loop. However, for any of the solutions proposed
+by this document, you can not assume that neither position or the orientation
+of the arm, in respect to the blade to be processed, will remain fixed.
+
+For a correct path planning the handler must follow during hardcoating task , it
+is important knowledge transform between coordinate system of the manipulator
+and of the blade being processed . Therefore, it is must use a system that
+allows the acquisition of information respect for the environment and the
+relative position between the handler and the blades .
 
 %%%%%%%%
 
