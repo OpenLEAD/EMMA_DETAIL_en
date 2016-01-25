@@ -1,70 +1,97 @@
 \subsection{Calibration}
 %%%%%%%%%%%%%% INTRO %%%%%%%%%%%%%%%
 
-% TODO Elael reler
 Once the robot is inside the draft tube, and positioned on the runner's area,
 the system needs to calibrate. In other words, it has to recognize the
 environment, the blade, the robot and the relative positions between all these
-elements.
+elements. % chain - What is calibrate
 
 The hardcoating process currently considers that the robot's position and the
 blade orientation is fixed in relation to the robot and, once correctly positioned,
 the process runs in open loop. However, for any of the solutions proposed
 by this document, you can not assume that neither position or the orientation
-of the arm, in respect to the blade to be processed, will remain fixed.
+of the arm in respect to the blade to be processed remains fixed. % why to
+% calibrate
 
-For a correct path planning the handler must follow during hardcoating task , it
-is important knowledge transform between coordinate system of the manipulator
-and of the blade being processed . Therefore, it is must use a system that
-allows the acquisition of information respect for the environment and the
-relative position between the handler and the blades .
+For the calibration process, it is first necessary to acquire data
+of the environment using some sensor (e.g. 3D scanner) then recognize the scene
+elements (i.e. robot, blade, etc) from the sensor's response. After all relative
+positions have been inferred, the system can run with a simple feedback for
+safety reasons, in this case a point laser.
 
-%%%%%%%%
+% For a correct path planning the handler must follow during hardcoating task , it
+% is important knowledge transform between coordinate system of the manipulator
+% and of the blade being processed . Therefore, it is must use a system that
+% allows the acquisition of information respect for the environment and the
+% relative position between the handler and the blades .
+% 
+% % %%%%%%%%
+% % 
+% % O processo de metalização utilizado atualmente considera que a posição e
+% % orientação da pá é fixa em relação ao robô e, uma vez, que corretamente
+% % posicionado, o processo é executado em malha aberta. Entretanto, para qualquer
+% % uma das soluções propostas por esse documento, não é possível assumir que nem a
+% % posição nem a orientação do manipulador, em relação a pá a ser processada, se
+% % manterão fixas.
+% % 
+% % Para um correto planejamento de trajetória que o manipulador deve seguir durante
+% % a tarefa de metalização, é importante o conhecimento da transformada entre o
+% % sistema de coordenada do manipulador e da pá a ser processada. Portanto, é
+% % necessário utilizar algum sistema que possibilite a aquisição de informações a
+% % respeito do ambiente e da posição relativa entre o manipulador e as pás.
+% % 
+% % %%%%%%%%%%%%%%%% MKT %%%%%%%%%%%%%%%
 
-O processo de metalização utilizado atualmente considera que a posição e
-orientação da pá é fixa em relação ao robô e, uma vez, que corretamente
-posicionado, o processo é executado em malha aberta. Entretanto, para qualquer
-uma das soluções propostas por esse documento, não é possível assumir que nem a
-posição nem a orientação do manipulador, em relação a pá a ser processada, se
-manterão fixas.
+\subsection{Sensor's Survey}
 
-Para um correto planejamento de trajetória que o manipulador deve seguir durante
-a tarefa de metalização, é importante o conhecimento da transformada entre o
-sistema de coordenada do manipulador e da pá a ser processada. Portanto, é
-necessário utilizar algum sistema que possibilite a aquisição de informações a
-respeito do ambiente e da posição relativa entre o manipulador e as pás.
+The use of a spatial data acquisition sensor is not limited calibration, it may
+also be useful to retrieve the model of the blade's hydraulic profile,
+the ideal profile as well as the current state of the blade.
 
-%%%%%%%%%%%%%%%% MKT %%%%%%%%%%%%%%%
+A survey on the sensors that best fit this purpose is organized by type
+below.
 
-\subsection{Estudo de sensores}
+% A utilização de um sensor de aquisição de dados espaciais não se limita somente
+% a localização, mas, dependendo do sistema a ser escolhido, pode também ser útil
+% na reconstrução do modelo do perfil hidráulico da pá, tanto do perfil ideal
+% quanto do estado atual da pá a ser processada (Tarefas descritas em
+% \ref{sec::introducao}).
 
-A utilização de um sensor de aquisição de dados espaciais não se limita somente
-a localização, mas, dependendo do sistema a ser escolhido, pode também ser útil
-na reconstrução do modelo do perfil hidráulico da pá, tanto do perfil ideal
-quanto do estado atual da pá a ser processada (Tarefas descritas em
-\ref{sec::introducao}).
-
-Esta seção irá apresentar os segmentos de sensores que possam suprir essa
-necessidade, assim como suas vantagens e limitações. 
+% Esta seção irá apresentar os segmentos de sensores que possam suprir essa
+% necessidade, assim como suas vantagens e limitações. 
 
 
-\subsubsection{3D scanners}
+\subsubsection{3D Scanners}
 
-3D scanners são equipamentos de alta precisão utilizados na indústria
-geralmente em aplicações de metrologia, construção civil, monitoramento de
-deformações, entre outras. O equipamento consiste em um feixe de laser que é
-direcionado por meio de um espelho e a partir da mudança de fase do sinal
-refletido é possível calcular a distância até o objeto atingido. O seu preço
-esta na faixa de U\$70.000,00.
+3D scanners are high-precision equipment used in industry usually in metrology
+applications, construction, strains monitoring, among others. The equipment
+consists of a laser beam which the direction is given by the angle of a
+controlled mirror.
+The distance to an object is calculated from the phase change between the
+emitted and reflected signal. Its price is in the range of U\$ 70,000.00
 
-\paragraph{Estações de medição}
+% 3D scanners são equipamentos de alta precisão utilizados na indústria
+% geralmente em aplicações de metrologia, construção civil, monitoramento de
+% deformações, entre outras. O equipamento consiste em um feixe de laser que é
+% direcionado por meio de um espelho e a partir da mudança de fase do sinal
+% refletido é possível calcular a distância até o objeto atingido. O seu preço
+% esta na faixa de U\$70.000,00.
 
-Esse tipo de sensor funciona a partir de um único feixe laser que é direcionado
-por um espelho giratório acoplado a um motor de passo de alta resolução. O
-sensor possui também uma base giratória, realizando assim um escaneamento de
-$360^o$ do ambiente. Graças a sua construção, esse tipo de sensor possui uma
-alta densidade de pontos e resolução, porém sua taxa de atualização não é muito
-alta.
+\paragraph{Total Station}
+
+
+This type of sensor works from a single laser beam which is directed by a
+rotating mirror coupled to a high resolution stepper motor. The sensor also has
+a swivel base, thus it is able to perform a $360^o$ scan on the environment.
+Thanks to its construction, this type of sensor has a high density of points
+and resolution, but its refresh rate is not much high .
+
+% Esse tipo de sensor funciona a partir de um único feixe laser que é direcionado
+% por um espelho giratório acoplado a um motor de passo de alta resolução. O
+% sensor possui também uma base giratória, realizando assim um escaneamento de
+% $360^o$ do ambiente. Graças a sua construção, esse tipo de sensor possui uma
+% alta densidade de pontos e resolução, porém sua taxa de atualização não é muito
+% alta.
 
 
 \begin{center}
@@ -137,6 +164,14 @@ alta.
 %TODO acertar figura
 
 \paragraph{Velodyne}
+
+% TODO ELAEL reler
+The company Velodyne currently has three models of 3D Deal . Models range
+basically in the number of pairs of transmitters and receivers and hence the
+final resolution. The models are VLP -16 HDL and HDL - 32E - 64E , 16,32 and 64 with
+channels respectively . This type of sensor has a high rate of
+update , however does not have a high density data . The more model
+used is the HDL- 32E intermediary.
 
 A empresa Velodyne possui, atualmente, 3 modelos de 3D Lidar. Os modelos variam
 basicamente no número de pares de emissores e receptores e, consequentemente, na
