@@ -93,66 +93,87 @@ and resolution, but its refresh rate is not much high .
 % alta densidade de pontos e resolução, porém sua taxa de atualização não é muito
 % alta.
 
-
+%\renewcommand{\arraystretch}{1.2}
+% \begin{table}[b]
+% \begin{minipage}{\textwidth}
+% \centering
 \begin{center}
-\begin{tabular*}{\columnwidth}{l @{\extracolsep{\fill}} cc}
+\begin{tabular*}{\columnwidth}{l @{\extracolsep{\fill}} ccc}
 \hline
 {\bf Feature}           &
-{\bf\begin{tabular}[x]{@{}c@{}}Faro \\Focus X 330\end{tabular}} & {\bf Leica P16}                                               \\ \hline {\bf Complexidade de Software}  & Média                                                      & \cellcolor[HTML]{92D050}{\color[HTML]{000000} {\bf Baixa}} \\
-{\bf Custo Material}            & \cellcolor[HTML]{FE0000}{\color[HTML]{FFFFFF} {\bf Alto}}  & Médio                                                      \\
-{\bf Tamanho}                   & Grande                                                     & \cellcolor[HTML]{92D050}{\bf Pequeno}                      \\
-{\bf Tempo de Resposta}         & \cellcolor[HTML]{FE0000}{\color[HTML]{FFFFFF} {\bf Alto}}  & \cellcolor[HTML]{92D050}{\bf Baixo}                        \\
-{\bf Acurácia da Profundidade}  & \cellcolor[HTML]{92D050}{\bf Alta}                         & Média                                                      \\
-{\bf Qualidade com Pouca Luz}  & \cellcolor[HTML]{92D050}{\bf Boa}                          & \cellcolor[HTML]{92D050}{\bf Boa}                          \\{\bf Qualidade com Muita Luz} & \cellcolor[HTML]{FE0000}{\color[HTML]{FFFFFF}
-{\bf Fraca}} & \cellcolor[HTML]{92D050}{\bf Boa}                          \\
-{\bf Consumo de Energia}        & Médio                                                      & \cellcolor[HTML]{92CDDC}{\bf Escalavel}                    \\
-{\bf Alcance}                   & \cellcolor[HTML]{92CDDC}{\bf Escalavel}                    & \cellcolor[HTML]{92CDDC}{\bf Escalavel}                    \\ \hline
+{\bf\begin{tabular}[x]{@{}c@{}}Faro Focus\\X 330\end{tabular}} & {\bf Leica
+P16} & {\bf\begin{tabular}[x]{@{}c@{}}Nikon \\MV330\end{tabular}}   \\[1mm]
+\hline 
+{\bf Vertical FoV\footnotemark[1] }%
+% \begin{tabular}[c]{@{}l@{}}Vertical\\
+% FoV\end{tabular} }
+& $300^o$ & $270^o$ & $45^o$
+\\[3.5mm]
+{\bf Horizontal FoV\footnotemark[1]}%\begin{tabular}[c]{@{}l@{}}Horizontal\\
+% FoV\end{tabular} }
+& $360^o$ &$360^o$ & $360^o$
+\\[3.5mm] {\bf Reach}            & 330m & 40m & 30m  \\[1mm]
+{\bf \begin{tabular}[c]{@{}l@{}}Scan Speed\\ (\textit{k}pts/s)\end{tabular}}
+                   & 976  & 1,000 & 2 \\[3.5mm]
+{\bf Precision}         & $\pm$2mm & $\pm$3mm  & $\pm$0.5mm \\[1mm]     
+{\bf Weight}  & 5.2 kg  & 12.25 kg & \textit{N.A.} \\[1mm]
+{\bf Size (cm)}  & 24x20x10  & 24x36x40 & \textit{N.A.} \\[1mm] 
+{\bf Batery Life} & 4.5  & 5.5  & \textit{N.A.} \\[1mm]
+{\bf \begin{tabular}[c]{@{}l@{}}Working\\ Temperature\end{tabular}} &
+$5^o$C/$40^o$C & $-20^o$C/$50^o$C & \textit{N.A.} \\[3.5mm] {\bf
+\begin{tabular}[c]{@{}l@{}}Price\\ U\$1,000.00\end{tabular}} & 70 & 80 & 355  
+\\[1mm]
+\hline
 \end{tabular*}
-\captionof{table}{Comparativo Luz Estruturada vs ToF. Fonte: \citep{larrylitof}}
+\captionof{table}{Comparativo Luz Estruturada vs ToF. Fonte:}
 %\caption{Dados principais do processo de metalização HVOF}
-\label{tab::estructvstof}
+%\label{tab::estructvstof}
 \end{center}
-
-\begin{itemize}
-  \item \textbf{Faro Focus X 330}
-  	\begin{itemize}
-  		\item Campo de visão (vertical/horizontal): $300^o$/$360^o$
-  		\item Alcance: 330m
-  		\item Velocidade máx. de escaneamento: 976.000pts/s
-  		\item Precisão: $\pm$2mm
-  		\item Peso: 5,2 kg
-  		\item Tamanho: 240 x 200 x 100 mm
-  		\item Vida da bateria: 4,5 horas
-  		\item Temperatura ambiente: $5^o$ - $40^o$ C
-  		\item Preço: U\$70.000,00
-	\end{itemize}
-  \item \textbf{Leica P16}
-  	\begin{itemize}
-  		\item Campo de visão (vertical/horizontal): $270^o$/$360^o$
-  		\item Alcance: 40m
-  		\item Velocidade máx. de escaneamento: 1.000.000pts/s
-  		\item Precisão: $\pm$3mm
-  		\item Peso: 12,25 kg
-  		\item Tamanho: 238 x 358 x 395 mm
-  		\item Vida da bateria: 5,5 horas
-  		\item Temperatura ambiente: $-20^o$ - $50^o$ C
-  		\item Preço: U\$80.000,00
-	\end{itemize}
-   \item \textbf{Nikon MV330}
-  	\begin{itemize}
-  		\item Campo de visão (vertical/horizontal): $45^o$/$360^o$
-  		\item Alcance: 30m
-  		\item Velocidade máx. de escaneamento: 2000pts/s
-  		\item Precisão: $\pm$0.5mm
-  		\item Peso: \textit{não informado}
-  		\item Tamanho: \textit{não informado}
-  		\item Vida da bateria: \textit{não informado}
-  		\item Temperatura ambiente: \textit{não informado}
-  		\item Preço: U\$355.000,00
-	\end{itemize}
-
-
-\end{itemize}
+% \end{minipage}
+% \end{table}
+ \footnotetext[1]{FoV: Field of View}
+% \enlargethispage{-4\baselineskip}
+% 
+% \begin{itemize}
+%   \item \textbf{Faro Focus X 330}
+%   	\begin{itemize}
+%   		\item Campo de visão (vertical/horizontal): $300^o$/$360^o$
+%   		\item Alcance: 330m
+%   		\item Velocidade máx. de escaneamento: 976.000pts/s
+%   		\item Precisão: $\pm$2mm
+%   		\item Peso: 5,2 kg
+%   		\item Tamanho: 240 x 200 x 100 mm
+%   		\item Vida da bateria: 4,5 horas
+%   		\item Temperatura ambiente: $5^o$ - $40^o$ C
+%   		\item Preço: U\$70.000,00
+% 	\end{itemize}
+%   \item \textbf{Leica P16}
+%   	\begin{itemize}
+%   		\item Campo de visão (vertical/horizontal): $270^o$/$360^o$
+%   		\item Alcance: 40m
+%   		\item Velocidade máx. de escaneamento: 1.000.000pts/s
+%   		\item Precisão: $\pm$3mm
+%   		\item Peso: 12,25 kg
+%   		\item Tamanho: 238 x 358 x 395 mm
+%   		\item Vida da bateria: 5,5 horas
+%   		\item Temperatura ambiente: $-20^o$ - $50^o$ C
+%   		\item Preço: U\$80.000,00
+% 	\end{itemize}
+%    \item \textbf{Nikon MV330}
+%   	\begin{itemize}
+%   		\item Campo de visão (vertical/horizontal): $45^o$/$360^o$
+%   		\item Alcance: 30m
+%   		\item Velocidade máx. de escaneamento: 2000pts/s
+%   		\item Precisão: $\pm$0.5mm
+%   		\item Peso: \textit{não informado}
+%   		\item Tamanho: \textit{não informado}
+%   		\item Vida da bateria: \textit{não informado}
+%   		\item Temperatura ambiente: \textit{não informado}
+%   		\item Preço: U\$355.000,00
+% 	\end{itemize}
+% 
+% 
+% \end{itemize}
 
 
 \begin{figure}[h!]
@@ -166,7 +187,7 @@ and resolution, but its refresh rate is not much high .
 \paragraph{Velodyne}
 
 % TODO ELAEL reler
-The company Velodyne currently has three models of 3D Deal . Models range
+The company Velodyne currently has three models of 3D LIDAR . Models range
 basically in the number of pairs of transmitters and receivers and hence the
 final resolution. The models are VLP -16 HDL and HDL - 32E - 64E , 16,32 and 64 with
 channels respectively . This type of sensor has a high rate of
