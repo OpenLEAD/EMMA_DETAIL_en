@@ -1,0 +1,394 @@
+
+\subsection{Sensor's Survey}
+
+The use of a spatial data acquisition sensor is not limited calibration, it may
+also be useful to retrieve the model of the blade's hydraulic profile,
+the ideal profile as well as the current state of the blade.
+
+A survey on the sensors that best fit this purpose is organized by type
+below.
+
+% A utilização de um sensor de aquisição de dados espaciais não se limita somente
+% a localização, mas, dependendo do sistema a ser escolhido, pode também ser útil
+% na reconstrução do modelo do perfil hidráulico da pá, tanto do perfil ideal
+% quanto do estado atual da pá a ser processada (Tarefas descritas em
+% \ref{sec::introducao}).
+
+% Esta seção irá apresentar os segmentos de sensores que possam suprir essa
+% necessidade, assim como suas vantagens e limitações. 
+
+
+\subsubsection{3D Scanners}
+
+3D scanners are high-precision equipment used in industry usually in metrology
+applications, construction, strains monitoring, among others. The equipment
+consists of a laser beam which the direction is given by the angle of a
+controlled mirror.
+The distance to an object is calculated from the phase change between the
+emitted and reflected signal. Its price is in the range of U\$ 70,000.00
+
+% 3D scanners são equipamentos de alta precisão utilizados na indústria
+% geralmente em aplicações de metrologia, construção civil, monitoramento de
+% deformações, entre outras. O equipamento consiste em um feixe de laser que é
+% direcionado por meio de um espelho e a partir da mudança de fase do sinal
+% refletido é possível calcular a distância até o objeto atingido. O seu preço
+% esta na faixa de U\$70.000,00.
+
+\paragraph{Total Station}
+
+
+This type of sensor works from a single laser beam which is directed by a
+rotating mirror coupled to a high resolution stepper motor. The sensor also has
+a swivel base, thus it is able to perform a $360^o$ scan on the environment.
+Thanks to its construction, this type of sensor has a high density of points
+and resolution, but its refresh rate is not much high .
+
+% Esse tipo de sensor funciona a partir de um único feixe laser que é direcionado
+% por um espelho giratório acoplado a um motor de passo de alta resolução. O
+% sensor possui também uma base giratória, realizando assim um escaneamento de
+% $360^o$ do ambiente. Graças a sua construção, esse tipo de sensor possui uma
+% alta densidade de pontos e resolução, porém sua taxa de atualização não é muito
+% alta.
+
+%\renewcommand{\arraystretch}{1.2}
+% \begin{table}[b]
+% \begin{minipage}{\textwidth}
+% \centering
+\begin{center}
+\begin{tabular*}{\columnwidth}{l @{\extracolsep{\fill}} ccc}
+\hline
+{\bf Feature}           &
+{\bf\begin{tabular}[x]{@{}c@{}}Faro Focus\\X 330\end{tabular}} & {\bf Leica
+P16} & {\bf\begin{tabular}[x]{@{}c@{}}Nikon \\MV330\end{tabular}}   \\[1mm]
+\hline 
+{\bf Vertical FoV\footnotemark[1] }%
+% \begin{tabular}[c]{@{}l@{}}Vertical\\
+% FoV\end{tabular} }
+& $300^o$ & $270^o$ & $45^o$
+\\[3.5mm]
+{\bf Horizontal FoV\footnotemark[1]}%\begin{tabular}[c]{@{}l@{}}Horizontal\\
+% FoV\end{tabular} }
+& $360^o$ &$360^o$ & $360^o$
+\\[3.5mm] {\bf Reach}            & 330m & 40m & 30m  \\[1mm]
+{\bf \begin{tabular}[c]{@{}l@{}}Scan Speed\\ (\textit{k}pts/s)\end{tabular}}
+                   & 976  & 1,000 & 2 \\[3.5mm]
+{\bf Precision}         & $\pm$2mm & $\pm$3mm  & $\pm$0.5mm \\[1mm]     
+{\bf Weight}  & 5.2 kg  & 12.25 kg & \textit{N.A.} \\[1mm]
+{\bf Size (cm)}  & 24x20x10  & 24x36x40 & \textit{N.A.} \\[1mm] 
+{\bf Batery Life} & 4.5  & 5.5  & \textit{N.A.} \\[1mm]
+{\bf \begin{tabular}[c]{@{}l@{}}Working\\ Temperature\end{tabular}} &
+$5^o$C/$40^o$C & $-20^o$C/$50^o$C & \textit{N.A.} \\[3.5mm] {\bf
+\begin{tabular}[c]{@{}l@{}}Price\\ U\$1,000.00\end{tabular}} & 70 & 80 & 355  
+\\[1mm]
+\hline
+\end{tabular*}
+\captionof{table}{Comparativo Luz Estruturada vs ToF. Fonte:}
+%\caption{Dados principais do processo de metalização HVOF}
+%\label{tab::estructvstof}
+\end{center}
+% \end{minipage}
+% \end{table}
+ \footnotetext[1]{FoV: Field of View}
+% \enlargethispage{-4\baselineskip}
+% 
+% \begin{itemize}
+%   \item \textbf{Faro Focus X 330}
+%   	\begin{itemize}
+%   		\item Campo de visão (vertical/horizontal): $300^o$/$360^o$
+%   		\item Alcance: 330m
+%   		\item Velocidade máx. de escaneamento: 976.000pts/s
+%   		\item Precisão: $\pm$2mm
+%   		\item Peso: 5,2 kg
+%   		\item Tamanho: 240 x 200 x 100 mm
+%   		\item Vida da bateria: 4,5 horas
+%   		\item Temperatura ambiente: $5^o$ - $40^o$ C
+%   		\item Preço: U\$70.000,00
+% 	\end{itemize}
+%   \item \textbf{Leica P16}
+%   	\begin{itemize}
+%   		\item Campo de visão (vertical/horizontal): $270^o$/$360^o$
+%   		\item Alcance: 40m
+%   		\item Velocidade máx. de escaneamento: 1.000.000pts/s
+%   		\item Precisão: $\pm$3mm
+%   		\item Peso: 12,25 kg
+%   		\item Tamanho: 238 x 358 x 395 mm
+%   		\item Vida da bateria: 5,5 horas
+%   		\item Temperatura ambiente: $-20^o$ - $50^o$ C
+%   		\item Preço: U\$80.000,00
+% 	\end{itemize}
+%    \item \textbf{Nikon MV330}
+%   	\begin{itemize}
+%   		\item Campo de visão (vertical/horizontal): $45^o$/$360^o$
+%   		\item Alcance: 30m
+%   		\item Velocidade máx. de escaneamento: 2000pts/s
+%   		\item Precisão: $\pm$0.5mm
+%   		\item Peso: \textit{não informado}
+%   		\item Tamanho: \textit{não informado}
+%   		\item Vida da bateria: \textit{não informado}
+%   		\item Temperatura ambiente: \textit{não informado}
+%   		\item Preço: U\$355.000,00
+% 	\end{itemize}
+% 
+% 
+% \end{itemize}
+
+
+\begin{figure}[h!]
+	\includegraphics[width=0.6\columnwidth]{figs/3dsensors/faro}
+	\caption{Faro Focus X330}
+    \label{fig::faro_focus}
+\end{figure}
+
+%TODO acertar figura
+
+\paragraph{Velodyne}
+
+% TODO ELAEL reler
+The company Velodyne currently has three models of 3D LIDAR . Models range
+basically in the number of pairs of transmitters and receivers and hence the
+final resolution. The models are VLP-16, HDL-32E  and HDL-64E, with 16,32 and 64
+channels respectively . This type of sensor has a high rate of update, however
+does not have a high density data, as expected by the usual trade off \textit{Density
+vs Update Rate}.
+The most widespread used model is the intermediary HDL- 32E. It has internal
+MEMS\footnotemark[2](accelerometers and gyroscopes) for bearing correction and
+a proctection rate IP67
+A summary of its features:
+
+% A empresa Velodyne possui, atualmente, 3 modelos de 3D Lidar. Os modelos variam
+% basicamente no número de pares de emissores e receptores e, consequentemente, na
+% resolução final. Os modelos são o VLP-16, o HDL-32E e HDL-64E, com 16,32 e 64
+% canais respectivamente. Esse tipo de sensor possui uma alta taxa de
+% atualização, entretanto não possui uma alta densidade de dados. O modelo mais
+% utilizado é o intermediário HDL-32E.
+
+\footnotetext[2]{MEMS: Microelectromechanical systems}
+
+% \begin{itemize}
+% \item 32 pares laser/detector  
+% \item Campo de Visão: +10.67$^o$ to -30.67$^o$ (vertical)
+% \item Rotação de $360^o$
+% \item Alcance - 1m - 100m 
+% \item 10 Hz frame rate (selecionável 5-20Hz)
+% \item Temperatura de Operação $-10^o$ to $+60^o$ C
+% \item Acurácia: $<$2 cm
+% \item Resolução Angular (vertical) 1.33$^o$
+% \item Peso: HDL-32E = 1kg; Cabos = 0.3kg
+% \item Tamanho: 15cm altura x 8.6cm diâmetro
+% \item Proteção: IP67
+% \item Correção de orientação (internal MEMS acelerometros and gyros)
+% \end{itemize}
+
+\begin{center}
+\begin{tabular*}{\columnwidth}{l @{\extracolsep{\fill}} c}
+\hline
+{\bf Feature}           &
+{\bf Velodyne HDL-32E}   \\[1mm]
+\hline 
+{\bf Vertical FoV\footnotemark[1] }%
+& $+10.67^o$ to $-30.67^o$
+\\[3.5mm]
+{\bf Horizontal FoV\footnotemark[1]}
+& $360^o$ 
+\\[3.5mm]
+
+{\bf Reach}            & 1m - 100m  \\[1mm]
+{\bf \begin{tabular}[c]{@{}l@{}}Scan Speed\\ (frames/s)\end{tabular}}
+                   & 10 (user-selectable 5-20) \\[3.5mm]
+{\bf Precision}         & $<$2 cm \\[1mm]     
+{\bf Weight}  & 1kg (+ 0.3 kg cables) \\[1mm]
+{\bf Size}  & 15cm height x 8.6cm diameter \\[1mm] 
+{\bf \begin{tabular}[c]{@{}l@{}}Working\\ Temperature\end{tabular}} &
+$-10^o$C/$+60^o$C \\[3.5mm]
+\hline
+\end{tabular*}
+\captionof{table}{Comparativo Luz Estruturada vs ToF. Fonte:}
+%\caption{Dados principais do processo de metalização HVOF}
+%\label{tab::estructvstof}
+\end{center}
+
+
+\begin{figure}[h!]
+   \centering
+   \includegraphics[width=0.8\columnwidth]{figs/3dsensors/velodyne}
+   \caption{Velodyne Models}
+   \label{fig::velodyne_models}
+\end{figure}
+
+\paragraph{Forecast 3D Laser System}
+
+The Forecast 3D is composed by a SICK's 2D laser scanner, models LMS 151 or 511,
+attached to a \textit{pan\&tilt} unit. It is a less expensive archtecture with a
+price around U\$37.000,00.
+
+% O sensor Forecast 3D consiste em um senor 2D laser da SICK, modelo LMS 151 ou
+% 511, acoplado a uma unidade $pan-tilt$. O seu preço esta na faixa de
+% U\$37.000,00.
+
+
+\begin{figure}[h!]
+   \centering
+   \includegraphics[width=0.8\columnwidth]{figs/3dsensors/forecast}
+   \caption{Forecast 3D Laser System}
+   \label{fig::forecast}
+\end{figure}
+
+\subsubsection{ToF Cameras}
+
+Known as Time -of -Flight Cameras are comprised of only devices
+a camera, does not need a stereo configuration for triangulation
+images. This type of device uses an internal infrared source and
+Analogously to laser devices, the distance calculated from the difference
+phase of the reflected signal . However, this technology enables the calculation
+simultaneously the distances of each object in the illuminated region by the IR source ,
+even with limited resolution 
+
+Conhecidas como Time-of-Flight Cameras, são dispositivos compostos por apenas
+uma câmera, não necessitando de uma configuração estéreo para triangularização
+de imagens. Esse tipo de dispositivo utiliza uma fonte infra-vermelho interna e de
+forma análoga aos dispositivos laser, calcula a distância a partir da diferença
+de fase do sinal refletido. Entretanto, essa tecnologia possibilita o cálculo
+simultâneo das distâncias de cada objeto na região iluminada pela fonte IR,
+mesmo que com resoluções limitadas.
+
+\paragraph{Mesa Imaging SwissRanger SR4000}
+
+
+\begin{itemize}
+  \item Alcance para detecção: 0.1 - 10.0 m
+  \item Alcance calibrado: 0.8 - 8.0 m
+  \item Drift com a temperatura (T) - $\leq$ 1.5 mm/$^o$C (max.) - For 10$^o$C
+  $\leq$ T $\leq$ 50$^o$C
+  \item Tamanho: 65 x 65 x 76 mm
+  \item Peso: 510 g
+\end{itemize}
+
+\begin{figure}[h!]
+   \centering
+   \includegraphics[width=0.8\columnwidth]{figs/3dsensors/mesa2}
+   \caption{Mesa Imaging SwissRanger SR4000}
+   \label{fig::mesa}
+\end{figure}
+
+\paragraph{Sentis M100 / Argos 3D - P100}
+
+\begin{itemize}
+  \item Medidas de distância e vídeo em tons de cinza
+  \item Resolução: 160 x 120 pixels
+  \item 40 - 160 fps
+  \item Alcance: $>$3m  (extensível até 10m indoor)
+  \item Campo de Visão: $90^o$
+  \item Tamanho: 75 x 57 x 26 mm
+  \item Peso:
+\end{itemize}
+
+\begin{figure}[h!]
+   \centering
+   \includegraphics[width=0.8\columnwidth]{figs/3dsensors/argos3dp100}
+   \caption{Sensor Argos 3D - P100}
+   \label{fig::forecast}
+\end{figure}
+
+\subsubsection{Câmeras de Luz Estruturada}
+
+Estes sensores constituem de uma fonte emissora de infra-vermelho e um receptor.
+Um padrão é projetado na cena a ser reconstruida e a partir da distorção desse
+padrão é possível o cálculo de distâncias. 
+
+%TODO exemplos dos sensores de luz estruturada
+%TODO Pros e cons
+
+%TODO ELAEL - decidir se abre uma subseção d eaplicações ou coloca um exemplo de
+% aplicação em cada componente - utilizar o seu material do SOTA em 3D sensors. 
+
+\begin{center}
+\begin{tabular*}{\columnwidth}{l @{\extracolsep{\fill}} cc}
+\hline
+{\bf Características}           &
+{\bf\begin{tabular}[x]{@{}c@{}}Luz\\Estruturada\end{tabular}} & {\bf ToF}                                               \\ \hline {\bf Complexidade de Software}  & Média                                                      & \cellcolor[HTML]{92D050}{\color[HTML]{000000} {\bf Baixa}} \\
+{\bf Custo Material}            & \cellcolor[HTML]{FE0000}{\color[HTML]{FFFFFF} {\bf Alto}}  & Médio                                                      \\
+{\bf Tamanho}                   & Grande                                                     & \cellcolor[HTML]{92D050}{\bf Pequeno}                      \\
+{\bf Tempo de Resposta}         & \cellcolor[HTML]{FE0000}{\color[HTML]{FFFFFF} {\bf Alto}}  & \cellcolor[HTML]{92D050}{\bf Baixo}                        \\
+{\bf Acurácia da Profundidade}  & \cellcolor[HTML]{92D050}{\bf Alta}                         & Média                                                      \\
+{\bf Qualidade com Pouca Luz}  & \cellcolor[HTML]{92D050}{\bf Boa}                          & \cellcolor[HTML]{92D050}{\bf Boa}                          \\{\bf Qualidade com Muita Luz} & \cellcolor[HTML]{FE0000}{\color[HTML]{FFFFFF}
+{\bf Fraca}} & \cellcolor[HTML]{92D050}{\bf Boa}                          \\
+{\bf Consumo de Energia}        & Médio                                                      & \cellcolor[HTML]{92CDDC}{\bf Escalavel}                    \\
+{\bf Alcance}                   & \cellcolor[HTML]{92CDDC}{\bf Escalavel}                    & \cellcolor[HTML]{92CDDC}{\bf Escalavel}                    \\ \hline
+\end{tabular*}
+\captionof{table}{Comparativo Luz Estruturada vs ToF. Fonte: \citep{larrylitof}}
+%\caption{Dados principais do processo de metalização HVOF}
+\label{tab::estructvstof}
+\end{center}
+
+\subsection{Conclusão}
+
+As restrições apresentadas pelo problema de calibração, dentro do ambiente da
+turbina, impõem um conjunto de requisitos mínimos que o sensor deve apresentar:
+
+\begin{itemize}
+  \item Alta resolução
+  \item Portabilidade
+  \item Alcance suficiente (>20m)
+  \item Resistir as condições de temperatura e umidade 
+\end{itemize}
+
+Além desses requisitos, é desejável também que o sensor tenha alimentação
+idependente e que sua velocidade de escaneamento não seja um fator limitante
+para a eficiência do processo.
+
+A classe de sensores que atende todas essas condições é a das Estações de
+medição, com exceção do sensor Nikon MV 330 que não possui a portabilidade
+necessária para a solução proposta, além de ter um preço muito maior que de seus
+concorrentes.
+
+O sensor Faro Focus X330, além de satisfazer os requisitos mínimos, é o que
+possui menor preço e, por isso, foi escolhido como o o sensor a ser utilizado na
+calibração do sistema e reponsável por colher os dados espacias do ambiente da
+turbina e do robô. 
+
+Entretanto, pelas especificações do sistema não foi possível garantir a perfeita
+operação do sensor nas condições de alta umidade apresentada no interior da
+turbina. O dipositivo opera com um sistema de lentes e lasers e, caso apresente
+condensação em um desses componentes, o resultado final de sensoriamento pode
+ser prejudicado. Devido a este fato, foi realizado uma bateria de testes na
+Usina de Jirau, no interior de uma turbina, afim de confirmar a viabilidade
+técnica desse sensor.
+
+O teste realizado constituiu na utlização de quatro esferas reflexivas,
+representadas na figura \ref{fig::esferas}, distribuidas pelo ambiente da
+turbina.
+Em seguida, foram realizadas 4 coletas de dados, sendo 3 delas à jusante do
+rotor e uma entre as pás do rotor e o distribuidor. Com a nuvem de pontos
+coletada, foi possível utilizar a assinatura única gerada pelas esferas para
+alinhar todos os conjuntos de dados em uma única imagem 3D.
+
+\begin{figure}[h!]
+\centering
+	\includegraphics[width=0.9\columnwidth]{figs/3dsensors/kit}
+	\caption{Conjunto de esferas reflexivas e tripé}
+	\label{fig::esferas}
+\end{figure}
+
+A figura \ref{fig::turbina_faro} representa a vista frontal da imagem gerada e, por sua
+vez, a figura \ref{fig::turbina_cad} representa uma reconstrução 3D gerada a
+partir da nuvem de pontos coletas e utilizando o software proprietário do
+fornecedor do sensor. 
+
+\begin{figure}[h!]
+\centering
+	\includegraphics[width=0.9\columnwidth]{figs/3dsensors/recorte_video}
+	\caption{Vista frontal da imagem gerada a partir dados adquiridos durante o
+	teste.}
+	\label{fig::turbina_faro}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+	\includegraphics[width=0.9\columnwidth]{figs/3dsensors/Pa_Real_Render_04}
+	\caption{Reconstrução em CAD da pá com os dados do teste.}
+	\label{fig::turbina_cad}
+\end{figure}
+
+A partir dos resultados gerados durante os testes foi comprovada que o sensor é
+capaz de operar nas condições extremas impostas pela turbina e com um nível de
+ruído aceitável para a aplicação em questão. 

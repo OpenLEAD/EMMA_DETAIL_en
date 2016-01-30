@@ -1,0 +1,42 @@
+%%%%%%%%%%%%%% INTRO %%%%%%%%%%%%%%%
+
+Once the robot is inside the draft tube, and positioned on the runner's area,
+the system needs to calibrate. In other words, it has to recognize the
+environment, the blade, the robot and the relative positions between all these
+elements. % chain - What is calibrate
+
+The hardcoating process currently considers that the robot's position and the
+blade orientation is fixed in relation to the robot and, once correctly positioned,
+the process runs in open loop. However, for any of the solutions proposed
+by this document, you can not assume that neither position or the orientation
+of the arm in respect to the blade to be processed remains fixed. % why to
+% calibrate
+
+For the calibration process, it is first necessary to acquire data
+of the environment using some sensor (e.g. 3D scanner) then recognize the scene
+elements (i.e. robot, blade, etc) from the sensor's response. After all relative
+positions have been inferred, the system can run with a simple feedback for
+safety reasons, in this case a point laser.
+
+% For a correct path planning the handler must follow during hardcoating task , it
+% is important knowledge transform between coordinate system of the manipulator
+% and of the blade being processed . Therefore, it is must use a system that
+% allows the acquisition of information respect for the environment and the
+% relative position between the handler and the blades .
+% 
+% % %%%%%%%%
+% % 
+% % O processo de metalização utilizado atualmente considera que a posição e
+% % orientação da pá é fixa em relação ao robô e, uma vez, que corretamente
+% % posicionado, o processo é executado em malha aberta. Entretanto, para qualquer
+% % uma das soluções propostas por esse documento, não é possível assumir que nem a
+% % posição nem a orientação do manipulador, em relação a pá a ser processada, se
+% % manterão fixas.
+% % 
+% % Para um correto planejamento de trajetória que o manipulador deve seguir durante
+% % a tarefa de metalização, é importante o conhecimento da transformada entre o
+% % sistema de coordenada do manipulador e da pá a ser processada. Portanto, é
+% % necessário utilizar algum sistema que possibilite a aquisição de informações a
+% % respeito do ambiente e da posição relativa entre o manipulador e as pás.
+% % 
+% % %%%%%%%%%%%%%%%% MKT %%%%%%%%%%%%%%%

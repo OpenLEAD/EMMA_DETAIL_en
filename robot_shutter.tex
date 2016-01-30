@@ -1,0 +1,68 @@
+
+\subsection{Shutter}%TODO mudar o nome do sistema de desvio do fluxo de
+% revestimento
+O processo de revestimento HVOF (\textit{High Velocity Oxygen Fuel}) requer
+velocidade da pistola controlada de $40~m/min$. Esta velocidade é essencial para
+a qualidade do processo e deve ser mantida constante para se obter uma camada 
+regular de material ao longo de toda a superfície da peça. Na solução
+pesquisada demonstou-se ser inviável utilizar um robô de grande porte, devido a
+limitação de acesso e ao confinamento do manipulador no ambiente. Portanto, o
+manipulador  escolhido realizará o processo em regiões delimitadas da
+superfície da peça e, em sua trajetória, haverá inevitavelmente mudanças de
+direção, e portanto acelerações, que irão variar a velocidade da pistola.
+Durante essas variações não deve-se injetar o material na peça, sendo necessário um mecanismo
+autônomo para impedir o processo nestes intervalos.
+
+A ideia inicialmente estudada foi de uma barreira (\textit{shutter}) ao fluxo na
+saída da pistola.
+A figura~\ref{fig::shutter_todos} ilustra a ideia para dois conceitos nas
+configurações aberta e fechada. 
+Nestes conceitos, uma barreira é movimentada automaticamente sempre que houver
+mudança de direção da pistola, impedindo que o fluxo de material atinja a
+pistola. 
+
+\begin{figure}[h!]
+   \centering
+   \includegraphics[width=0.8\columnwidth]{figs/shutter/shutter_todos}
+   \caption{Conceitos de \textit{shutter} avaliados}
+   \label{fig::shutter_todos}
+\end{figure}
+
+Algumas considerações foram levantadas para avaliar a viabilidade
+desta solução, como a alta temperatura da chama, a capacidade do atuador, a
+resistência mecânica da barreira e a taxa de acúmulo de material. Este conceito
+foi abandonado principalmente devido ao acúmulo de material na barreira, o que
+levaria a um aumento de seu peso, e por consequência momento de inércia,
+alterando a dinâmica prevista, ou ainda, poderia chegar a obstruir a saída da
+chama causando danos à pistola.
+
+Outra proposta que está sendo estudada é a de modificar o fluxo da linha de
+revestimento. A ideia é a inclusão de uma válvula direcional com atuação por
+solenóide para desviar o fluxo do material de revestimento para um tanque ou
+cilindro de retorno. Esta atuação deve ser autônoma e coordenada com a
+trajetória do manipulador. A válvula seria de três vias e duas posições ($3/2$) tal que, no 
+repouso, direciona-se o fluxo diretamente para a pistola e, quando
+atuada, bloqueia-se o fluxo para a pistola e abre-se o fluxo para exaustão. Uma
+válvula limitadora de pressão regulável seria utilizada na linha de exaustão
+para igualar as diferenças de pressão entre as duas vias, minimizando efeitos
+transitórios.
+Outra característica opcional importante para redução dos efeitos transitórios,
+como pico de pressão, é a de sobreposição aberta, ou seja, o fluxo só seria
+fechado da posição inicial quando o movimento de troca estivesse completo. 
+A figura~\ref{fig::circuito_hvof} apresenta o circuito do processo HVOF de forma
+simplificada.
+
+ \begin{figure}[h!]
+   \centering
+   \includegraphics[width=0.8\columnwidth]{figs/shutter/Circuito_HVOF_mod}
+   \caption{Circuito do processo HVOF modificado}
+   \label{fig::circuito_hvof}
+\end{figure}
+
+A linha tracejada representa o circuito original, as linhas em vermelho
+representam a modificação do circuito com os equipamentos adicionais indicados.
+
+Esta é uma alternativa que tem como principal vantagem a de poder retornar a
+matéria-prima do revestimento para tanque, ou seja, evita-se
+o desperdício do material no ambiente. Esta matéria-prima poderia então ser
+reaproveitada no processo, separando-se o gás.
