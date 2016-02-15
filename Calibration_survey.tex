@@ -235,21 +235,20 @@ price around U\$37.000,00.
 
 \subsubsection{ToF Cameras}
 
-Known as Time -of -Flight Cameras are comprised of only devices
-a camera, does not need a stereo configuration for triangulation
-images. This type of device uses an internal infrared source and
-Analogously to laser devices, the distance calculated from the difference
-phase of the reflected signal . However, this technology enables the calculation
-simultaneously the distances of each object in the illuminated region by the IR source ,
-even with limited resolution 
+Time-of-Flight Cameras are comprised of a special camera only. This type of
+device uses an internal infrared source and, similarly to laser devices, the
+distances are calculated from the difference of phase between the original and
+the reflected signal.
+Despite enabling the calculation of each object's distance simultaneously  in
+the illuminated region by the IR source, this technology has limited resolution.
 
-Conhecidas como Time-of-Flight Cameras, são dispositivos compostos por apenas
-uma câmera, não necessitando de uma configuração estéreo para triangularização
-de imagens. Esse tipo de dispositivo utiliza uma fonte infra-vermelho interna e de
-forma análoga aos dispositivos laser, calcula a distância a partir da diferença
-de fase do sinal refletido. Entretanto, essa tecnologia possibilita o cálculo
-simultâneo das distâncias de cada objeto na região iluminada pela fonte IR,
-mesmo que com resoluções limitadas.
+% Conhecidas como Time-of-Flight Cameras, são dispositivos compostos por apenas
+% uma câmera, não necessitando de uma configuração estéreo para triangularização
+% de imagens. Esse tipo de dispositivo utiliza uma fonte infra-vermelho interna e de
+% forma análoga aos dispositivos laser, calcula a distância a partir da diferença
+% de fase do sinal refletido. Entretanto, essa tecnologia possibilita o cálculo
+% simultâneo das distâncias de cada objeto na região iluminada pela fonte IR,
+% mesmo que com resoluções limitadas.
 
 \paragraph{Mesa Imaging SwissRanger SR4000}
 
@@ -289,7 +288,9 @@ mesmo que com resoluções limitadas.
    \label{fig::forecast}
 \end{figure}
 
-\subsubsection{Câmeras de Luz Estruturada}
+\subsubsection{Structured-Light 3D Scanner}
+
+
 
 Estes sensores constituem de uma fonte emissora de infra-vermelho e um receptor.
 Um padrão é projetado na cena a ser reconstruida e a partir da distorção desse
@@ -304,18 +305,25 @@ padrão é possível o cálculo de distâncias.
 \begin{center}
 \begin{tabular*}{\columnwidth}{l @{\extracolsep{\fill}} cc}
 \hline
-{\bf Características}           &
-{\bf\begin{tabular}[x]{@{}c@{}}Luz\\Estruturada\end{tabular}} & {\bf ToF}                                               \\ \hline {\bf Complexidade de Software}  & Média                                                      & \cellcolor[HTML]{92D050}{\color[HTML]{000000} {\bf Baixa}} \\
-{\bf Custo Material}            & \cellcolor[HTML]{FE0000}{\color[HTML]{FFFFFF} {\bf Alto}}  & Médio                                                      \\
-{\bf Tamanho}                   & Grande                                                     & \cellcolor[HTML]{92D050}{\bf Pequeno}                      \\
-{\bf Tempo de Resposta}         & \cellcolor[HTML]{FE0000}{\color[HTML]{FFFFFF} {\bf Alto}}  & \cellcolor[HTML]{92D050}{\bf Baixo}                        \\
-{\bf Acurácia da Profundidade}  & \cellcolor[HTML]{92D050}{\bf Alta}                         & Média                                                      \\
-{\bf Qualidade com Pouca Luz}  & \cellcolor[HTML]{92D050}{\bf Boa}                          & \cellcolor[HTML]{92D050}{\bf Boa}                          \\{\bf Qualidade com Muita Luz} & \cellcolor[HTML]{FE0000}{\color[HTML]{FFFFFF}
-{\bf Fraca}} & \cellcolor[HTML]{92D050}{\bf Boa}                          \\
-{\bf Consumo de Energia}        & Médio                                                      & \cellcolor[HTML]{92CDDC}{\bf Escalavel}                    \\
-{\bf Alcance}                   & \cellcolor[HTML]{92CDDC}{\bf Escalavel}                    & \cellcolor[HTML]{92CDDC}{\bf Escalavel}                    \\ \hline
+{\bf \bf\begin{tabular}[x]{@{}c@{}}Technical\\Features\end{tabular}}           & {\bf\begin{tabular}[x]{@{}c@{}}Structured-Light\\3D Scanner\end{tabular}} & {\bf ToF}                                               \\ \hline
+{\bf Software Complexity}  & Média                                        &
+\cellcolor[HTML]{92D050}{\color[HTML]{000000} {\bf Low}} \\ {\bf Cost}          
+& \cellcolor[HTML]{FE0000}{\color[HTML]{FFFFFF} {\bf Alto}}  & Médio     \\
+{\bf Size}                   & Grande                                             
+& \cellcolor[HTML]{92D050}{\bf Pequeno}                      \\
+{\bf Response time}         & \cellcolor[HTML]{FE0000}{\color[HTML]{FFFFFF} {\bf
+Alto}} & \cellcolor[HTML]{92D050}{\bf Low}                        \\
+{\bf Depth accuracy}  & \cellcolor[HTML]{92D050}{\bf Alta}                         & Média                                                      \\
+{\bf Low light quality}  & \cellcolor[HTML]{92D050}{\bf Boa}                         
+& \cellcolor[HTML]{92D050}{\bf Boa}                          \\{\bf Bright
+light quality} & \cellcolor[HTML]{FE0000}{\color[HTML]{FFFFFF} {\bf Low}} &
+\cellcolor[HTML]{92D050}{\bf Boa}                          \\
+{\bf Energy consumption}        & Médio                                                     
+& \cellcolor[HTML]{92CDDC}{\bf Scalable}                    \\
+{\bf Reach}                   & \cellcolor[HTML]{92CDDC}{\bf Scalable}            
+& \cellcolor[HTML]{92CDDC}{\bf Scalable}                    \\ \hline
 \end{tabular*}
-\captionof{table}{Comparativo Luz Estruturada vs ToF. Fonte: \citep{larrylitof}}
+\captionof{table}{Structured-Light vs ToF. Source: \citep{larrylitof}}
 %\caption{Dados principais do processo de metalização HVOF}
 \label{tab::estructvstof}
 \end{center}
