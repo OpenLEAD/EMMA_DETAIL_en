@@ -250,35 +250,36 @@ the illuminated region by the IR source, this technology has limited resolution.
 % simultâneo das distâncias de cada objeto na região iluminada pela fonte IR,
 % mesmo que com resoluções limitadas.
 
-\paragraph{Mesa Imaging SwissRanger SR4000}
+% \paragraph{Mesa Imaging SwissRanger SR4000}
+% 
+% 
+% \begin{itemize}
+%   \item Maximum Framerate: 50 FPS
+%   \item Alcance para detecção: 0.1 - 10.0 m
+%   \item Alcance calibrado: 0.8 - 8.0 m
+%   \item Temperature Drift (T) - $\leq$ 1.5 mm/$^o$C (max.) - For 10$^o$C
+%   $\leq$ T $\leq$ 50$^o$C
+%   \item Size: 65 x 65 x 76 mm
+%   \item Weight: 510 g
+% \end{itemize}
+% 
+% \begin{figure}[h!]
+%    \centering
+%    \includegraphics[width=0.8\columnwidth]{figs/3dsensors/mesa2}
+%    \caption{Mesa Imaging SwissRanger SR4000}
+%    \label{fig::mesa}
+% \end{figure}
 
-
+\paragraph{ Argos 3D - P100}
+%http://www.bluetechnix.com/en/products/depthsensing/product/sentis-tof-m100/%
 \begin{itemize}
-  \item Alcance para detecção: 0.1 - 10.0 m
-  \item Alcance calibrado: 0.8 - 8.0 m
-  \item Drift com a temperatura (T) - $\leq$ 1.5 mm/$^o$C (max.) - For 10$^o$C
-  $\leq$ T $\leq$ 50$^o$C
-  \item Tamanho: 65 x 65 x 76 mm
-  \item Peso: 510 g
-\end{itemize}
-
-\begin{figure}[h!]
-   \centering
-   \includegraphics[width=0.8\columnwidth]{figs/3dsensors/mesa2}
-   \caption{Mesa Imaging SwissRanger SR4000}
-   \label{fig::mesa}
-\end{figure}
-
-\paragraph{Sentis M100 / Argos 3D - P100}
-
-\begin{itemize}
-  \item Medidas de distância e vídeo em tons de cinza
-  \item Resolução: 160 x 120 pixels
-  \item 40 - 160 fps
-  \item Alcance: $>$3m  (extensível até 10m indoor)
-  \item Campo de Visão: $90^o$
-  \item Tamanho: 75 x 57 x 26 mm
-  \item Peso:
+  %\item Medidas de distância e vídeo em tons de cinza
+  \item Resolution: 160 x 120 pixels
+  \item Up to 160 fps
+  \item Application Range: from 0.1 to 3m%$>$3m  (extensível até 10m indoor)
+  \item Field-of-View: $90^o$
+  \item Dimensions: 26 x 75 x 57 mm
+  \item Weight: 140g
 \end{itemize}
 
 \begin{figure}[h!]
@@ -290,11 +291,13 @@ the illuminated region by the IR source, this technology has limited resolution.
 
 \subsubsection{Structured-Light 3D Scanner}
 
-
-
-Estes sensores constituem de uma fonte emissora de infra-vermelho e um receptor.
-Um padrão é projetado na cena a ser reconstruida e a partir da distorção desse
-padrão é possível o cálculo de distâncias. 
+These sensors are composed of a source of infrared and a receiver.
+A pattern is projected onto the scene to be reconstructed and, from its
+distortion, the calculation of distances is possible.
+% 
+% Estes sensores constituem de uma fonte emissora de infra-vermelho e um receptor.
+% Um padrão é projetado na cena a ser reconstruida e a partir da distorção desse
+% padrão é possível o cálculo de distâncias. 
 
 %TODO exemplos dos sensores de luz estruturada
 %TODO Pros e cons
@@ -306,19 +309,19 @@ padrão é possível o cálculo de distâncias.
 \begin{tabular*}{\columnwidth}{l @{\extracolsep{\fill}} cc}
 \hline
 {\bf \bf\begin{tabular}[x]{@{}c@{}}Technical\\Features\end{tabular}}           & {\bf\begin{tabular}[x]{@{}c@{}}Structured-Light\\3D Scanner\end{tabular}} & {\bf ToF}                                               \\ \hline
-{\bf Software Complexity}  & Média                                        &
+{\bf Software Complexity}  & Average                                        &
 \cellcolor[HTML]{92D050}{\color[HTML]{000000} {\bf Low}} \\ {\bf Cost}          
-& \cellcolor[HTML]{FE0000}{\color[HTML]{FFFFFF} {\bf Alto}}  & Médio     \\
-{\bf Size}                   & Grande                                             
-& \cellcolor[HTML]{92D050}{\bf Pequeno}                      \\
+& \cellcolor[HTML]{FE0000}{\color[HTML]{FFFFFF} {\bf High}}  & Average     \\
+{\bf Size}                   & Big                                             
+& \cellcolor[HTML]{92D050}{\bf Small}                      \\
 {\bf Response time}         & \cellcolor[HTML]{FE0000}{\color[HTML]{FFFFFF} {\bf
-Alto}} & \cellcolor[HTML]{92D050}{\bf Low}                        \\
-{\bf Depth accuracy}  & \cellcolor[HTML]{92D050}{\bf Alta}                         & Média                                                      \\
-{\bf Low light quality}  & \cellcolor[HTML]{92D050}{\bf Boa}                         
-& \cellcolor[HTML]{92D050}{\bf Boa}                          \\{\bf Bright
+High}} & \cellcolor[HTML]{92D050}{\bf Low}                        \\
+{\bf Depth accuracy}  & \cellcolor[HTML]{92D050}{\bf High}                         & Average                                                      \\
+{\bf Low light quality}  & \cellcolor[HTML]{92D050}{\bf High}                         
+& \cellcolor[HTML]{92D050}{\bf High}                          \\{\bf Bright
 light quality} & \cellcolor[HTML]{FE0000}{\color[HTML]{FFFFFF} {\bf Low}} &
-\cellcolor[HTML]{92D050}{\bf Boa}                          \\
-{\bf Energy consumption}        & Médio                                                     
+\cellcolor[HTML]{92D050}{\bf High}                          \\
+{\bf Energy consumption}        & Average                                                     
 & \cellcolor[HTML]{92CDDC}{\bf Scalable}                    \\
 {\bf Reach}                   & \cellcolor[HTML]{92CDDC}{\bf Scalable}            
 & \cellcolor[HTML]{92CDDC}{\bf Scalable}                    \\ \hline
@@ -328,39 +331,64 @@ light quality} & \cellcolor[HTML]{FE0000}{\color[HTML]{FFFFFF} {\bf Low}} &
 \label{tab::estructvstof}
 \end{center}
 
-\subsection{Conclusão}
+\subsection{Conclusion}
 
 As restrições apresentadas pelo problema de calibração, dentro do ambiente da
 turbina, impõem um conjunto de requisitos mínimos que o sensor deve apresentar:
 
+The sensor have some minimum requirements, imposed by the the calibration
+process, that must be fulfilled. There are: 
+
 \begin{itemize}
-  \item Alta resolução
-  \item Portabilidade
-  \item Alcance suficiente (>20m)
-  \item Resistir as condições de temperatura e umidade 
+  \item High resolution
+  \item Portability
+  \item Enough reach (>20m)
+  \item Withstand the temperature and humidity conditions 
 \end{itemize}
 
-Além desses requisitos, é desejável também que o sensor tenha alimentação
-idependente e que sua velocidade de escaneamento não seja um fator limitante
-para a eficiência do processo.
+In addition to these requirements, it is also desirable that the sensor has power
+independent counsel and its scanning speed is not a limiting factor
+for process efficiency.
 
-A classe de sensores que atende todas essas condições é a das Estações de
-medição, com exceção do sensor Nikon MV 330 que não possui a portabilidade
-necessária para a solução proposta, além de ter um preço muito maior que de seus
-concorrentes.
+The class of sensors that meets all these conditions is the Stations
+measurement, except for the Nikon MV 330 sensor that does not have the portability
+required for the solution, besides having a much higher price than their
+competitors.
 
-O sensor Faro Focus X330, além de satisfazer os requisitos mínimos, é o que
-possui menor preço e, por isso, foi escolhido como o o sensor a ser utilizado na
-calibração do sistema e reponsável por colher os dados espacias do ambiente da
-turbina e do robô. 
+Faro Focus X330 sensor, in addition to meeting the minimum requirements, is what
+has a lower price and therefore was chosen as the sensor to be used in
+system calibration and accept responsibility for the spoon-spatial data environment
+turbine and the robot.
 
-Entretanto, pelas especificações do sistema não foi possível garantir a perfeita
-operação do sensor nas condições de alta umidade apresentada no interior da
-turbina. O dipositivo opera com um sistema de lentes e lasers e, caso apresente
-condensação em um desses componentes, o resultado final de sensoriamento pode
-ser prejudicado. Devido a este fato, foi realizado uma bateria de testes na
-Usina de Jirau, no interior de uma turbina, afim de confirmar a viabilidade
-técnica desse sensor.
+However, the system specifications was not possible to guarantee perfect
+sensor operation in high humidity conditions presented within the
+turbine. The dipositivo operates with a system of lenses and lasers, and, if present
+condensation of these components, the end result of sensing can
+be impaired. Due to this fact, it performed a battery of tests on
+Plant Jirau within a turbine, in order to confirm the feasibility
+technique of this sensor.
+
+% Além desses requisitos, é desejável também que o sensor tenha alimentação
+% idependente e que sua velocidade de escaneamento não seja um fator limitante
+% para a eficiência do processo.
+% 
+% A classe de sensores que atende todas essas condições é a das Estações de
+% medição, com exceção do sensor Nikon MV 330 que não possui a portabilidade
+% necessária para a solução proposta, além de ter um preço muito maior que de seus
+% concorrentes.
+% 
+% O sensor Faro Focus X330, além de satisfazer os requisitos mínimos, é o que
+% possui menor preço e, por isso, foi escolhido como o o sensor a ser utilizado na
+% calibração do sistema e reponsável por colher os dados espacias do ambiente da
+% turbina e do robô. 
+% 
+% Entretanto, pelas especificações do sistema não foi possível garantir a perfeita
+% operação do sensor nas condições de alta umidade apresentada no interior da
+% turbina. O dipositivo opera com um sistema de lentes e lasers e, caso apresente
+% condensação em um desses componentes, o resultado final de sensoriamento pode
+% ser prejudicado. Devido a este fato, foi realizado uma bateria de testes na
+% Usina de Jirau, no interior de uma turbina, afim de confirmar a viabilidade
+% técnica desse sensor.
 
 O teste realizado constituiu na utlização de quatro esferas reflexivas,
 representadas na figura \ref{fig::esferas}, distribuidas pelo ambiente da
